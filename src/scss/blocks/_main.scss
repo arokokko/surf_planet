@@ -1,0 +1,18 @@
+.main__slider {
+    height: 100vh;
+    &-item1 {
+        background: url('../img/slider_surf.png') center center/cover no-repeat ;
+    }
+    &-item2 {
+        background: url('../img/slider_surf.png') center center/cover no-repeat ;
+    }
+    &-item3 {
+        background: url('../img/slider_surf.png') center center/cover no-repeat ;
+    }
+    &-item4 {
+        background: url('../img/slider_surf.png') center center/cover no-repeat ;
+    }
+}
+.slider-item {
+    height: 100%;
+}
