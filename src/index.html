@@ -2,62 +2,109 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=s, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Surfplanet</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <header class="header">
-
-    </header>
-    <section class="main">
-        <div class="main__slider">
-            <div class="main__slider-item1 slider-item">
-                <div class="slider-item__info">
-                    <div class="slider-item__info_subheader subtext_left">surf</div>
-                    <h2 class="slider-item__info_header">surfing lessons</h2>
-                    <div class="slider-item__info_subtitle subtext_left">condition</div>
-                    <h3 class="slider-item__info_title">radical</h3>
-                    <a href="#" class="slider-item__info-link">
-                        <img src="icons/arrow_right.svg" alt="right arrow">
+    <div class="container">
+        <header class="header">
+            <h1 class="header__title">surf planet</h1>
+            <div class="header__aside">
+                <a href="#" class="header__aside_logo">
+                    <img src="img/logo1.png" alt="logo">
+                </a>
+                <nav class="header__menu">
+                    <a class="header__menu_item" href="#">
+                        <img src="./icons/surf_icon.svg" alt="surf" class="header__menu_img">
+                        <div class="header__menu_descr">Surfing</div>
                     </a>
+                    <a class="header__menu_item" href="#">
+                        <img src="./icons/kite_icon.svg" alt="kite" class="header__menu_img">
+                        <div class="header__menu_descr">Kiting</div>
+                    </a>
+                    <a class="header__menu_item" href="#">
+                        <img src="./icons/sup_icon.svg" alt="SUP" class="header__menu_img">
+                        <div class="header__menu_descr">SUP</div>
+                    </a>
+                    <a class="header__menu_item" href="#">
+                        <img src="./icons/shop_icon.svg" alt="shop" class="header__menu_img">
+                        <div class="header__menu_descr">Shop</div>
+                    </a>
+                    
+                </nav>
+            </div>
+            
+        </header>
+        <section class="main">
+            <div class="main__slider">
+                <img class="main__slider_arrows main__slider_arrows-right" src="icons/arrow_right.svg" alt="arrow right">
+                <img class="main__slider_arrows main__slider_arrows-left" src="icons/arrow_left.svg" alt="arrow left">
+                <div class="main__slider_dots">
+                    <div class="main__slider_dot">
+                        <div class="main__slider_dot-number">01</div>
+                        <div class="main__slider_dot-name">Surfing lessons</div>
+                    </div>
+                    <div class="main__slider_dot">
+                        <div class="main__slider_dot-number">02</div>
+                        <div class="main__slider_dot-name">Kiting lessons</div>
+                    </div>
+                    <div class="main__slider_dot">
+                        <div class="main__slider_dot-number">03</div>
+                        <div class="main__slider_dot-name">Paddle boarding</div>
+                    </div>
+                    <div class="main__slider_dot">
+                        <div class="main__slider_dot-number">04</div>
+                        <div class="main__slider_dot-name">Equipment shop</div>
+                    </div>
+                </div>
+                <div class="main__slider-item1 slider-item">
+                    <div class="slider-item__info">
+                        <div class="slider-item__info_subheader subtext_left subtext">surf</div>
+                        <h2 class="slider-item__info_title titleH2">surfing lessons</h2>
+                        <div class="slider-item__info_descr subtext_left subtext">condition</div>
+                        <h3 class="slider-item__info_subtitle titleH3">from zero to hero</h3>
+                        <a href="#" class="slider-item__info-link">
+                            <img src="icons/arrow_right.svg" alt="right arrow">
+                        </a>
+                    </div>
+                </div>
+                <div class="main__slider-item2 slider-item" style="display: none">
+                    <div class="slider-item__info">
+                        <div class="slider-item__info_subheader subtext_left subtext">kite</div>
+                        <h2 class="slider-item__info_title titleH2">kiting lessons</h2>
+                        <div class="slider-item__info_descr subtext_left subtext">condition</div>
+                        <h3 class="slider-item__info_subtitle titleH3">radical</h3>
+                        <a href="#" class="slider-item__info-link">
+                            <img src="icons/arrow_right.svg" alt="right arrow">
+                        </a>
+                    </div>
+                </div>
+                <div class="main__slider-item3 slider-item" style="display: none">
+                    <div class="slider-item__info">
+                        <div class="slider-item__info_subheader subtext_left subtext">SUP</div>
+                        <h2 class="slider-item__info_title titleH2">SUP boarding</h2>
+                        <div class="slider-item__info_descr subtext_left subtext">condition</div>
+                        <h3 class="slider-item__info_subtitle titleH3">radical</h3>
+                        <a href="#" class="slider-item__info-link">
+                            <img src="icons/arrow_right.svg" alt="right arrow">
+                        </a>
+                    </div>
+                </div>
+                <div class="main__slider-item4 slider-item" style="display: none">
+                    <div class="slider-item__info">
+                        <div class="slider-item__info_subheader subtext_left subtext">shop</div>
+                        <h2 class="slider-item__info_title titleH2">Equipment shop</h2>
+                        <div class="slider-item__info_descr subtext_left subtext">condition</div>
+                        <h3 class="slider-item__info_subtitle titleH3">radical</h3>
+                        <a href="#" class="slider-item__info-link">
+                            <img src="icons/arrow_right.svg" alt="right arrow">
+                        </a>
+                    </div>
                 </div>
             </div>
-            <div class="main__slider-item2 slider-item">
-                <div class="slider-item__info">
-                    <div class="slider-item__info_subheader subtext_left">kite</div>
-                    <h2 class="slider-item__info_header">kitesurfing lessons</h2>
-                    <div class="slider-item__info_subtitle subtext_left">condition</div>
-                    <h3 class="slider-item__info_title">radical</h3>
-                    <a href="#" class="slider-item__info-link">
-                        <img src="icons/arrow_right.svg" alt="right arrow">
-                    </a>
-                </div>
-            </div>
-            <div class="main__slider-item3 slider-item">
-                <div class="slider-item__info">
-                    <div class="slider-item__info_subheader subtext_left">SUP</div>
-                    <h2 class="slider-item__info_header">StandUpPaddle Surfing</h2>
-                    <div class="slider-item__info_subtitle subtext_left">condition</div>
-                    <h3 class="slider-item__info_title">radical</h3>
-                    <a href="#" class="slider-item__info-link">
-                        <img src="icons/arrow_right.svg" alt="right arrow">
-                    </a>
-                </div>
-            </div>
-            <div class="main__slider-item4 slider-item">
-                <div class="slider-item__info">
-                    <div class="slider-item__info_subheader subtext_left">shop</div>
-                    <h2 class="slider-item__info_header">surfing shop</h2>
-                    <div class="slider-item__info_subtitle subtext_left">condition</div>
-                    <h3 class="slider-item__info_title">radical</h3>
-                    <a href="#" class="slider-item__info-link">
-                        <img src="icons/arrow_right.svg" alt="right arrow">
-                    </a>
-                </div>
-            </div>
-        </div>
-    </section>
+        </section>
+    </div>
     <script src="js/script.js"></script>
 </body>
 </html>

@@ -1,5 +1,8 @@
+
 .main__slider {
     height: 100vh;
+    position: relative;
+
     &-item1 {
         background: url('../img/slider_surf.png') center center/cover no-repeat ;
     }
@@ -12,7 +15,83 @@
     &-item4 {
         background: url('../img/slider_surf.png') center center/cover no-repeat ;
     }
+
+    &_arrows {
+        position: absolute;
+        top: 40px;
+        cursor: pointer;
+        z-index: 2;
+
+        &-right {
+            right: 80px;
+        }
+
+        &-left {
+            right: 125px;
+        }
+    }
+
+    &_dots {
+        position: absolute;
+        right: 80px;
+        bottom: 57px;
+        z-index: 2;
+        max-width: 920px;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &_dot {
+        width: 200px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-top: 6px;
+        border-top: 4px solid #fff;
+        cursor: pointer;
+
+        &-number {
+            font-size: 24px;
+            font-weight: 800;
+        }
+
+        &-name {
+            font-size: 16px;
+            font-weight: 300;
+        }
+
+        &:hover {
+            border-top: 4px solid $green;
+        }
+
+        &:not(:last-child) {
+            margin-right: 40px;
+        }
+        
+    }
 }
 .slider-item {
     height: 100%;
+    position: relative;
+
+    &__info {
+        position: absolute;
+        right: 80px;
+        bottom: 140px;
+        text-transform: uppercase;
+        text-align: right;
+
+        &_subtitle {
+            margin-bottom: 25px;
+        }
+
+        &_descr {
+            margin-bottom: 8px;
+        }
+
+        &_title {
+            margin-bottom: 40px;
+            margin-top: 5px;
+        }
+    }
 }
