@@ -1,6 +1,7 @@
 const gulp = require("gulp");
 const webpack = require("webpack-stream");
 const sass = require("gulp-sass");
+const concat = require('gulp-concat');
 const autoprefixer = require("autoprefixer");
 const cleanCSS = require("gulp-clean-css");
 const postcss = require("gulp-postcss");
@@ -46,6 +47,16 @@ gulp.task("build-js", () => {
                 .pipe(browsersync.stream());
 });
 
+gulp.task('css', () => {
+  return gulp.src([
+      'node_modules/normalize.css/normalize.css',
+      'node_modules/animate.css/animate.min.css'
+  ])
+      .pipe(concat('assets/_libs.scss'))
+      .pipe(gulp.dest('./src/scss'))
+      .pipe(browsersync.stream());
+}); 
+
 gulp.task("build-sass", () => {
     return gulp.src("./src/scss/**/*.scss")
                 .pipe(sass().on('error', sass.logError))
@@ -83,7 +94,7 @@ gulp.task("watch", () => {
     gulp.watch("./src/js/**/*.js", gulp.parallel("build-js"));
 });
 
-gulp.task("build", gulp.parallel("copy-html", "copy-assets", "fonts", "build-sass", "build-js"));
+gulp.task("build", gulp.parallel("copy-html", "css", "copy-assets", "fonts", "build-sass", "build-js"));
 
 gulp.task("prod", () => {
     gulp.src("./src/index.html")
@@ -93,7 +104,7 @@ gulp.task("prod", () => {
     gulp.src("./src/icons/**/*.*")
         .pipe(gulp.dest(dist + "/icons"));
     gulp.src("./src/fonts/**/*.*")
-      .pipe(gulp.dest(dist + "/fonts"));
+        .pipe(gulp.dest(dist + "/fonts"));
 
     gulp.src("./src/js/main.js")
         .pipe(webpack({

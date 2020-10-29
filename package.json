@@ -1,5 +1,5 @@
 {
-  "name": "food",
+  "name": "SurfPlanet",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -16,13 +16,16 @@
   "devDependencies": {
     "@babel/core": "^7.7.0",
     "@babel/preset-env": "^7.7.1",
+    "animate.css": "^4.1.1",
     "autoprefixer": "^9.7.1",
     "babel-loader": "^8.0.6",
     "browser-sync": "^2.26.7",
     "gulp": "^4.0.2",
     "gulp-clean-css": "^4.2.0",
+    "gulp-concat": "^2.6.1",
     "gulp-postcss": "^8.0.0",
     "gulp-sass": "^4.0.2",
+    "normalize.css": "^8.0.1",
     "webpack": "^4.41.2",
     "webpack-cli": "^3.3.10",
     "webpack-stream": "^5.2.1"
