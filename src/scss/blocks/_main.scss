@@ -45,13 +45,13 @@
             background: url('../img/slider_surf.png') center center/cover no-repeat ;
         }
         &-item2 {
-            background: url('../img/slider_surf.png') center center/cover no-repeat ;
+            background: url('../img/slider_kite.png') center center/cover no-repeat ;
         }
         &-item3 {
-            background: url('../img/slider_surf.png') center center/cover no-repeat ;
+            background: url('../img/slider_sup.png') center center/cover no-repeat ;
         }
         &-item4 {
-            background: url('../img/slider_surf.png') center center/cover no-repeat ;
+            background: url('../img/slider_shop.png') center center/cover no-repeat ;
         }
     }
 
@@ -100,7 +100,11 @@
         }
 
         &:hover {
-            border-top: 4px solid $green;
+            .main__slider_dot-number,
+            .main__slider_dot-name {
+                text-shadow: 2px 2px 4px $green;
+            }
+            
         }
 
         &:not(:last-child) {
@@ -133,4 +137,8 @@
             margin-top: 5px;
         }
     }
+}
+
+.dot-active {
+    border-top: 4px solid $green;
 }
