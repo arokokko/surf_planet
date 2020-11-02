@@ -1,0 +1,52 @@
+.surf {
+    padding: 80px 0 80px 0;
+    min-height: 100vh;
+    background-color: #171919;
+    text-transform: uppercase;
+    position: relative;
+
+    &__subheader {
+        margin-right: 80px;
+    }
+
+    &__poi {
+        &::after {
+            content: '';
+            height: 350px;
+            width: 149px;
+            position: absolute;
+            top: 80px;
+            right: 0;
+            background-image: url('../icons/map_poi_icon.svg');
+        }
+    }
+    
+    &__slider {
+        
+        &_wrapper {
+            min-height: 790px;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+        }
+
+        &_item {
+            min-height: 650px;
+            width: 25%;
+        }
+        
+        &_item1 {
+            background: url('../img/surf_slide1.png') center center / cover no-repeat;
+        }
+        &_item2 {
+            background: url('../img/surf_slide2.png') center center / cover no-repeat;
+        }
+        &_item3 {
+            background: url('../img/surf_slide3.png') center center / cover no-repeat;
+        }
+        &_item4 {
+            background: url('../img/surf_slide4.png') center center / cover no-repeat;
+        }
+    }
+    
+}

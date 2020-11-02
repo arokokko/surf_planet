@@ -20,6 +20,16 @@
 
 @font-face {
 	font-family: 'Fira Sans';
+	src: url('../fonts/FiraSans-Thin.ttf');
+	src: local('../fonts/FiraSans-Thin'),
+		url('../fonts/FiraSans-Thin.ttf') format('truetype');
+	font-weight: 100;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'Fira Sans';
 	src: url('../fonts/FiraSans-ExtraBold.ttf');
 	src: local('../fonts/FiraSans-ExtraBold'),
 		url('../fonts/FiraSans-ExtraBold.ttf') format('truetype');
