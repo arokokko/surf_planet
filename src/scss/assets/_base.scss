@@ -24,32 +24,6 @@ a {
     position: relative;
 }
 
-// .div {
-//     &__head {
-//     width: 100%;
-//     position: relative;
-//     }
-
-//     &__title {
-//         position: absolute;
-//         left: 150px;
-//         top: 65px;
-//         z-index: 3;
-
-//         &_shadow {
-//             font-size: 200px;
-//             line-height: 0.8;
-//             font-weight: 800;
-//             position: absolute;
-//             left: 0;
-//             top: 100px;
-//             z-index: 2;
-//             color: rgba(#fff, 0.02);
-//             transform: translateX(-40px);
-//         }
-//     }
-// }
-
 .titleH2 {
     letter-spacing: 2px;
     font-size: 80px;
@@ -123,4 +97,40 @@ a {
     font-weight: 800;
     line-height: 0.8;
     opacity: 0.02;
+}
+
+.btn {
+    font-size: 40px;
+    font-weight: 800;
+    line-height: 0.8;
+
+    span {
+        font-weight: 800;
+        background-color: $green;
+        padding: 17px 57px 17px 17px;
+        display: inline-block;
+        margin-left: 19px;
+        position: relative;
+
+        &::before {
+            content: '';
+            position: absolute;
+            width: 20px;
+            height: 2px;
+            left: -10px;
+            top: 50%;
+            background-color: #fff;
+        }
+
+        &::after {
+            content: '';
+            position: absolute;
+            width: 25px;
+            height: 21px;
+            background-image: url('../icons/arrow_right.svg');
+            right: 17px;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+    }
 }

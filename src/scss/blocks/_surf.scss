@@ -1,13 +1,9 @@
 .surf {
-    padding: 80px 0 80px 0;
+    padding: 80px;
     min-height: 100vh;
     background-color: #171919;
     text-transform: uppercase;
     position: relative;
-
-    &__subheader {
-        margin-right: 80px;
-    }
 
     &__poi {
         &::after {
@@ -27,12 +23,26 @@
             width: 100%;
             display: flex;
             justify-content: center;
+            align-items: center;
         }
 
         &_item {
-            width: 21%;
+            width: 25%;
+            position: relative;
         }
-        
+
+        &_item:nth-child(n + 2) {
+            margin-left: -40px;
+        }
+
+        &_item:nth-child(4n + 1) {
+            margin-top: 32px;
+        }
+
+        &_item:nth-child(4n + 3) {
+            margin-top: 89px;
+        }
+
         &_item1 {
             background: url('../img/surf_slide1.png') center center / cover no-repeat;
         }
@@ -51,6 +61,12 @@
             background-color: rgba(#1c2121, 0.85);
             padding: 65px 0 0 40px;
             position: relative;
+            transition: all 0.5s;
+
+            &:hover {
+                background-color: rgba(#1c2121, 0.3);
+                cursor: pointer;
+            }
 
             &-title {
                 font-size: 40px;
@@ -60,7 +76,6 @@
             }
 
             &-location {
-                font-weight: 400;
                 font-size: 18px;
                 letter-spacing: 8px;
                 transform: rotate(-90deg);
@@ -78,10 +93,20 @@
             &-btn {
                 position: absolute;
                 bottom: 0;
-                left: 45%;
-
+                left: 40px;
+                display: none;
             }
         }
     }
     
+}
+
+.current_slide {
+    .surf__slider_inner {
+        background-color: rgba(#1c2121, 0.3);
+    }
+    .surf__slider_inner-btn {
+        display: block;
+    }
+
 }
