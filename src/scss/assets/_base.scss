@@ -99,38 +99,3 @@ a {
     opacity: 0.02;
 }
 
-.btn {
-    font-size: 40px;
-    font-weight: 800;
-    line-height: 0.8;
-
-    span {
-        font-weight: 800;
-        background-color: $green;
-        padding: 17px 57px 17px 17px;
-        display: inline-block;
-        margin-left: 19px;
-        position: relative;
-
-        &::before {
-            content: '';
-            position: absolute;
-            width: 20px;
-            height: 2px;
-            left: -10px;
-            top: 50%;
-            background-color: #fff;
-        }
-
-        &::after {
-            content: '';
-            position: absolute;
-            width: 25px;
-            height: 21px;
-            background-image: url('../icons/arrow_right.svg');
-            right: 17px;
-            top: 50%;
-            transform: translateY(-50%);
-        }
-    }
-}
