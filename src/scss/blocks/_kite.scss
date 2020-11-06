@@ -1,9 +1,22 @@
 .kite {
-    margin-top: 10px;
+    // margin-top: 10px;
     padding: 80px;
     min-height: 100vh;
     background-color: #171919;
     text-transform: uppercase;
+    position: relative;
 
-    
+    &::after {
+        content: '';
+        width: 400px;
+        height: 271px;
+        position: absolute;
+        top: -30px;
+        right: -80px;
+        background-image: url('../icons/shaka_icon.svg');
+        z-index: 3;
+        transform: rotate(-30deg);
+
+    }
+
 }

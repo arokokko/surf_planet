@@ -1,10 +1,7 @@
 .subheader {
-    display: flex;
-    justify-content: space-between;
     
     &__title {
         position: relative;
-        min-width: 50%;
 
         &_titleH2 {
             position: absolute;
@@ -15,14 +12,6 @@
         &_shadow {
             margin-left: -125px;
             margin-top: 30px;
-        }
-    }
-
-    &__descr {
-        padding-top: 100px;
-
-        &_subtext {
-            margin-bottom: 8px;
         }
     }
 }
