@@ -2,16 +2,17 @@
     
     &__title {
         position: relative;
+        text-transform: uppercase;
 
         &_titleH2 {
             position: absolute;
-            top: 0;
-            left: 0;
+            top: -30px;
+            left: 125px;
         }
         
         &_shadow {
-            margin-left: -125px;
-            margin-top: 30px;
+            margin-left: -45px;
+            margin-top: 20px;
         }
     }
 }

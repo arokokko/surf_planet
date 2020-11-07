@@ -1,12 +1,14 @@
-const slider = () => {
-    const slider = document.querySelector('.main__slider'),
-        slides = slider.querySelectorAll('.slider-item'),
-        next = slider.querySelector('.next'),
-        prev = slider.querySelector('.prev'),
-        dotsWrap = slider.querySelector('.main__slider_dots'), 
-        dots = slider.querySelectorAll('.main__slider_dot');
+const carousel = (sliderSelector, slidesSelector, nextSelector, prevSelector, dotsWrapSelector, dotSelector) => {
+    const slider = document.querySelector(sliderSelector),
+        slides = slider.querySelectorAll(slidesSelector),
+        next = slider.querySelector(nextSelector),
+        prev = slider.querySelector(prevSelector),
+        dotsWrap = slider.querySelector(dotsWrapSelector), 
+        dots = slider.querySelectorAll(dotSelector);
         
     let slideIndex;
+
+    console.dir(slides);
 
     showSlides(slideIndex = 0);
 
@@ -20,10 +22,13 @@ const slider = () => {
         }
 
         slides.forEach(item => item.classList.add('hide'));
-        dots.forEach(item => item.classList.remove('dot-active'));
-
         slides[slideIndex].classList.remove('hide');
-        dots[slideIndex].classList.add('dot-active');
+
+        if(dotsWrapSelector != undefined && dotSelector != undefined) {
+            dots.forEach(item => item.classList.remove('dot-active'));
+            dots[slideIndex].classList.add('dot-active');
+        }
+            
     }
 
     function plusSlide(n) {
@@ -42,14 +47,16 @@ const slider = () => {
         showSlides(slideIndex = n);
     }
 
-    dotsWrap.addEventListener('click', (e) => {
-        let target = e.target;
-        for(let i = 0; i < dots.length; i++) {
-            if(target && dots[i].contains(target)){
-                currentSlide(i);
+    if(dotsWrapSelector != undefined && dotSelector != undefined) {
+        dotsWrap.addEventListener('click', (e) => {
+            let target = e.target;
+            for(let i = 0; i < dots.length; i++) {
+                if(target && dots[i].contains(target)){
+                    currentSlide(i);
+                }
             }
-        }
-    });
+        });
+    }
 };
 
-export default slider;
+export default carousel;

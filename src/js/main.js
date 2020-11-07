@@ -1,7 +1,8 @@
 import date from './modules/date';
-import slider from './modules/slider';
+import carousel from './modules/slider';
 
 window.addEventListener('DOMContentLoaded', () => {
     date();
-    slider();
+    carousel('.main__slider', '.slider-item', '.next', '.prev', '.main__slider_dots', '.main__slider_dot');
+    carousel('.surf__carousel__wrapper', '.slider__item', '.next', '.prev');
 });

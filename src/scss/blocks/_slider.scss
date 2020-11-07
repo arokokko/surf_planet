@@ -1,0 +1,47 @@
+.slider {
+    
+    &__wrapper {
+        height: 780px;
+        position: relative;
+    }
+
+    &__item {
+        height: 100%;
+        position: relative;  
+        
+        &-content {
+            max-width: 27%;
+            position: absolute;
+            top: 40%;
+            right: 0;
+            font-size: 20px;
+            line-height: 1.5;
+            font-weight: 300;
+        }
+    }
+
+    &-info {
+        position: absolute;
+        top: 80px;
+        right: 0;
+    }
+
+    &__subtext {
+        margin-bottom: 8px;
+    }
+
+    &__arrows {
+        position: absolute;
+        top: 120px;
+        cursor: pointer;
+        z-index: 3;
+
+        &-next {
+            right: 0;
+        }
+
+        &-prev {
+            right: 45px;
+        }
+    }
+}

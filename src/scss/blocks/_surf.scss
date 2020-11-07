@@ -1,11 +1,10 @@
 .surf {
-    padding: 80px;
+    padding-top: 100px;
+    padding-bottom: 80px;
     min-height: 100vh;
     background-color: #171919;
-    text-transform: uppercase;
     position: relative;
 
-    &__poi {
         &::after {
             content: '';
             height: 350px;
@@ -15,12 +14,13 @@
             right: 0;
             background-image: url('../icons/map_poi_icon.svg');
         }
-    }
+    
     
     &__slider {
         
         &_wrapper {
             width: 100%;
+            padding: 40px;
             display: flex;
             justify-content: center;
             align-items: center;
@@ -29,6 +29,7 @@
         &_item {
             width: 25%;
             position: relative;
+            text-transform: uppercase;
         }
 
         &_item:nth-child(n + 2) {
@@ -94,6 +95,25 @@
                 bottom: 0;
                 left: 40px;
             }
+        }
+    }
+
+    &__carousel {
+
+        &-item1 {
+            background: url('../img/surf4.png') top left / auto no-repeat;
+        }
+
+        &-item2 {
+            background: url('../img/surf3.png') top left / auto no-repeat;
+        }
+
+        &-item3 {
+            background: url('../img/surf2.png') top left / auto no-repeat;
+        }
+
+        &-item4 {
+            background: url('../img/surf1.png') top left / auto no-repeat;
         }
     }
     
