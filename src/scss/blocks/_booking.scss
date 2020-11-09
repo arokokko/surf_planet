@@ -1,0 +1,43 @@
+.booking {
+    text-transform: uppercase;
+    padding: 0 130px 0 130px;
+    display: flex;
+    justify-content: space-between;
+    
+
+    // & > div:not(:last-child) {
+    //     margin-right: 100px;
+    // }
+
+    &__item {
+        position: relative;
+        min-height: 220px;
+    }
+}
+
+.sub {
+    font-size: 18px;
+    display: inline-block;
+    text-align: right;
+    letter-spacing: 8px;
+    opacity: 0.5;
+    position: absolute;
+    transform: rotate(-90deg) translate(-100%, 0);
+    transform-origin: left top;
+    top: 0;
+    left: 0;
+}
+
+.type {
+    padding-left: 40px;
+    font-weight: 800;
+    font-size: 40px;
+    letter-spacing: 6px;
+}
+
+.total {
+    font-size: 14px;
+    text-align: right;
+    letter-spacing: 5.25px;
+    opacity: 0.75;
+}

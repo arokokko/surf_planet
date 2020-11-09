@@ -15,12 +15,24 @@
             background-image: url('../icons/map_poi_icon.svg');
         }
     
+        &::before {
+            content: '';
+            width: 500px;
+            height: 500px;
+            position: absolute;
+            top: 45%;
+            right: 5%;
+            opacity: 0.2;
+            background-image: url('../img/surf_add.png');
+        }
     
     &__slider {
+        margin-top: 80px;
         
         &_wrapper {
             width: 100%;
-            padding: 40px;
+            margin-right: 40px;
+            // padding: 40px;
             display: flex;
             justify-content: center;
             align-items: center;
@@ -100,6 +112,21 @@
 
     &__carousel {
 
+        &__wrapper {
+            &::before {
+                content: '12°07\'02.8\"N 109°11\'46.1\"E'; 
+                transform: rotate(-90deg);
+                position: absolute;
+                left: -25px;
+                bottom: 30%;
+                opacity: 0.1;
+                font-size: 18px;
+                letter-spacing: 8px;
+                width: 20px;
+                white-space: nowrap;
+            }
+        }
+
         &-item1 {
             background: url('../img/surf4.png') top left / auto no-repeat;
         }
@@ -115,6 +142,14 @@
         &-item4 {
             background: url('../img/surf1.png') top left / auto no-repeat;
         }
+    }
+
+    &__booking {
+        margin: 50px auto 60px auto;
+    }
+
+    &__btn {
+        text-align: center;
     }
     
 }

@@ -7,16 +7,20 @@
 
     &__item {
         height: 100%;
+        width: 100%;
         position: relative;  
         
         &-content {
-            max-width: 27%;
+            max-width: 30%;
             position: absolute;
             top: 40%;
             right: 0;
             font-size: 20px;
             line-height: 1.5;
             font-weight: 300;
+            background-color: rgba(#171919, 0.1); 
+            border-radius: 20px;
+            padding: 10px 0 10px 10px;
         }
     }
 
@@ -24,6 +28,7 @@
         position: absolute;
         top: 80px;
         right: 0;
+        text-align: right;
     }
 
     &__subtext {
@@ -44,4 +49,19 @@
             right: 45px;
         }
     }
+
+    &__down {
+        position: absolute;
+        width: 100%;
+        left: 130px;
+        bottom: 5%;
+    }
+
+    // &__img-down {
+    //     position: absolute;
+    //     width: 300px;
+    //     opacity: 0.5;
+    //     right: 15%;
+    //     bottom: -15%;
+    // }
 }

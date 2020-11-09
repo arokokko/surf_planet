@@ -8,8 +8,6 @@ const carousel = (sliderSelector, slidesSelector, nextSelector, prevSelector, do
         
     let slideIndex;
 
-    console.dir(slides);
-
     showSlides(slideIndex = 0);
 
     function showSlides(n) {
@@ -23,7 +21,7 @@ const carousel = (sliderSelector, slidesSelector, nextSelector, prevSelector, do
 
         slides.forEach(item => item.classList.add('hide'));
         slides[slideIndex].classList.remove('hide');
-
+        
         if(dotsWrapSelector != undefined && dotSelector != undefined) {
             dots.forEach(item => item.classList.remove('dot-active'));
             dots[slideIndex].classList.add('dot-active');
