@@ -1,23 +1,24 @@
 .booking {
     text-transform: uppercase;
-    padding: 0 120px 0 120px;
+    padding: 0 20px 0 20px;
     display: flex;
     justify-content: space-between;
 
     &__item {
         position: relative;
         min-height: 220px;
+        width: 350px;
 
         &_btn {
             
             &-minus {
                 top: 55px;
-                right: 45px;
+                right: 50%;
             }
 
             &-plus {
                 top: 55px;
-                right: 5px;
+                left: 55%;
             }
         }
     }
@@ -45,7 +46,7 @@
 
 .total {
     font-size: 14px;
-    text-align: right;
+    text-align: center;
     letter-spacing: 5.25px;
     opacity: 0.75;
 }
