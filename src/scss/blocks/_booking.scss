@@ -1,17 +1,25 @@
 .booking {
     text-transform: uppercase;
-    padding: 0 130px 0 130px;
+    padding: 0 120px 0 120px;
     display: flex;
     justify-content: space-between;
-    
-
-    // & > div:not(:last-child) {
-    //     margin-right: 100px;
-    // }
 
     &__item {
         position: relative;
         min-height: 220px;
+
+        &_btn {
+            
+            &-minus {
+                top: 55px;
+                right: 45px;
+            }
+
+            &-plus {
+                top: 55px;
+                right: 5px;
+            }
+        }
     }
 }
 
@@ -29,7 +37,7 @@
 }
 
 .type {
-    padding-left: 40px;
+    padding-left: 35px;
     font-weight: 800;
     font-size: 40px;
     letter-spacing: 6px;

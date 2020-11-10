@@ -10,15 +10,22 @@
 
     &::after {
         content: '';
-        width: 400px;
-        height: 271px;
+        width: 350px;
+        height: 237px;
         position: absolute;
         top: 20px;
         right: -50px;
-        background-image: url('../icons/shaka_icon.svg');
+        background-image: url('../icons/shaka.png');
         transform: rotate(-20deg);
+        opacity: 0.1;
 
     }
 
-    
+    &__booking {
+        margin: 50px auto 60px auto;
+    }
+
+    &__btn {
+        text-align: center;
+    }
 }
