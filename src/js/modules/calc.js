@@ -1,37 +1,41 @@
 const calc = () => {
 
-    getResult('.surf__booking_quantity', '.surf__booking_persons', '.surf__persons_btns', '.surf__quantity_btns', '.type', '#surf_total', 65);
+    getTotalPrice('.surf__booking_quantity', '.surf__booking_persons', '.surf__persons_btns', '.surf__quantity_btns', '.type', '#surf_total', 65);
 
-    function getResult(quantitySelector, personsSelector, personsBtnsSelector, quantityBtnsSelector, valueSelector, totalSelector, rate) {
-        const quantity = document.querySelector(quantitySelector),
-            persons = document.querySelector(personsSelector),
-            personsBtns = persons.querySelector(personsBtnsSelector),
-            personsValue = persons.querySelector(valueSelector),
-            quantityBtns = quantity.querySelector(quantityBtnsSelector),
-            quantityValue = quantity.querySelector(valueSelector),
-            totalValue = document.querySelector(totalSelector);
+    getTotalPrice('.kite__booking_quantity', '.kite__booking_persons', '.kite__persons_btns', '.kite__quantity_btns', '.type', '#kite_total', 50);
 
+    function getTotalPrice(quantitySel, personsSel, personsBtnsSel, quantityBtnsSel, valueSel, totalSel, rate) {
+        const quantity = document.querySelector(quantitySel),
+            persons = document.querySelector(personsSel),
+            personsBtns = persons.querySelector(personsBtnsSel),
+            personsValue = persons.querySelector(valueSel),
+            quantityBtns = quantity.querySelector(quantityBtnsSel),
+            quantityValue = quantity.querySelector(valueSel),
+            totalValue = document.querySelector(totalSel);
+
+        let quantityDescr = quantityValue.innerHTML.split(' ')[1],
+            personsDescr = personsValue.innerHTML.split(' ')[1];
     
-        function changeValue(btnsSelector, valueSelector, sublingSelector, text) {
-            const btns = btnsSelector.querySelectorAll('.btn_booking');
-            btnsSelector.addEventListener('click', (e) => {
+        function changeValue(btnsSel, valueSel, sublingSel, text) {
+            const btns = btnsSel.querySelectorAll('.btn_booking');
+            btnsSel.addEventListener('click', (e) => {
                 btns.forEach((item) => {
                     if(e.target && e.target == item) {
-                        if(item.classList.contains('minus') && parseInt(valueSelector.innerHTML) > 1) {
-                            valueSelector.innerHTML = `${parseInt(valueSelector.innerHTML) - 1} ${checkText(text, parseInt(valueSelector.innerHTML) - 1)}`;
-                        } else if (item.classList.contains('plus') && parseInt(valueSelector.innerHTML) < 12) {
-                            valueSelector.innerHTML = `${parseInt(valueSelector.innerHTML) + 1} ${checkText(text, parseInt(valueSelector.innerHTML) + 1)}`;
+                        if(item.classList.contains('minus') && parseInt(valueSel.innerHTML) > 1) {
+                            valueSel.innerHTML = `${parseInt(valueSel.innerHTML) - 1} ${checkText(text, parseInt(valueSel.innerHTML) - 1)}`;
+                        } else if (item.classList.contains('plus') && parseInt(valueSel.innerHTML) < 12) {
+                            valueSel.innerHTML = `${parseInt(valueSel.innerHTML) + 1} ${checkText(text, parseInt(valueSel.innerHTML) + 1)}`;
                         }
                     }
                 });
-                totalValue.innerHTML = `$ ${rate * parseInt(valueSelector.innerHTML) * parseInt(sublingSelector.innerHTML)} USD`;
+                totalValue.innerHTML = `$ ${rate * parseInt(valueSel.innerHTML) * parseInt(sublingSel.innerHTML)} USD`;
             });
         }
-        changeValue(personsBtns, personsValue, quantityValue, 'persons');
-        changeValue(quantityBtns, quantityValue, personsValue, 'lessons');
+        changeValue(personsBtns, personsValue, quantityValue, personsDescr);
+        changeValue(quantityBtns, quantityValue, personsValue, quantityDescr);
 
-        function checkText(sometext, selectorInner) {
-            if(selectorInner === 1) {
+        function checkText(sometext, selInner) {
+            if(selInner === 1) {
                 return sometext.slice(0, -1);
             } else {
                 return sometext;

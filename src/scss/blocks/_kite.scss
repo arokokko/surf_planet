@@ -1,9 +1,8 @@
 .kite {
-    margin-top: 10px;
+    // margin-top: 10px;
     padding: 80px;
     min-height: 100vh;
     background-color: #171919;
-    text-transform: uppercase;
     position: relative;
     overflow: hidden;
     
@@ -21,6 +20,18 @@
 
     }
 
+    &::before {
+        content: '';
+        width: 334px;
+        height: 600px;
+        position: absolute;
+        bottom: 0;
+        right: 15%;
+        opacity: 0.2;
+        background-image: url('../img/kite_bar.png');
+        
+    }
+
     &__booking {
         margin: 50px auto 60px auto;
     }
@@ -28,4 +39,23 @@
     &__btn {
         text-align: center;
     }
+
+    &__carousel {
+        &-item1 {
+            background: url('../img/kite4.png') top left / auto no-repeat;
+        }
+
+        &-item2 {
+            background: url('../img/kite3.png') top left / auto no-repeat;
+        }
+
+        &-item3 {
+            background: url('../img/kite2.png') top left / auto no-repeat;
+        }
+
+        &-item4 {
+            background: url('../img/kite1.png') top left / auto no-repeat;
+        }
+    }
 }
+

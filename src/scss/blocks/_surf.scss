@@ -1,9 +1,10 @@
 .surf {
+    padding: 80px;
     padding-top: 100px;
-    padding-bottom: 80px;
     min-height: 100vh;
     background-color: #171919;
     position: relative;
+    overflow:hidden;
 
         &::after {
             content: '';
@@ -23,7 +24,7 @@
             top: 45%;
             right: 5%;
             opacity: 0.2;
-            background-image: url('../img/surf_add.png');
+            background-image: url('../img/surf_fins.png');
         }
     
     &__slider {
