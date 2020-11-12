@@ -9,14 +9,14 @@
 
     &::after {
         content: '';
-        width: 350px;
-        height: 237px;
+        width: 359px;
+        height: 320px;
         position: absolute;
         top: 25px;
         right: -25px;
-        background-image: url('../icons/shaka.png');
+        background-image: url('../img/maori_shaka_bg.png');
         transform: rotate(-20deg);
-        opacity: 0.1;
+        opacity: 0.02;
 
     }
 

@@ -8,14 +8,14 @@
 
     &::after {
         content: '';
-        width: 400px;
-        height: 364px;
+        width: 300px;
+        height: 297px;
         position: absolute;
         top: 50px;
-        right: 65px;
-        background-image: url('../icons/gibiskus_icon.svg');
+        right: 45px;
+        background-image: url('../img/maori_gibiskus_bg.png');
         transform: rotate(45deg);
-        opacity: 0.05;
+        opacity: 0.02;
 
     }
 
