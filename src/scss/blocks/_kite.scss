@@ -12,8 +12,8 @@
         width: 350px;
         height: 237px;
         position: absolute;
-        top: 20px;
-        right: -50px;
+        top: 25px;
+        right: -25px;
         background-image: url('../icons/shaka.png');
         transform: rotate(-20deg);
         opacity: 0.1;
@@ -27,7 +27,7 @@
         position: absolute;
         bottom: 0;
         right: 15%;
-        opacity: 0.2;
+        opacity: 0.3;
         background-image: url('../img/kite_bar.png');
         
     }
@@ -42,7 +42,7 @@
 
     &__carousel {
         &-item1 {
-            background: url('../img/kite4.png') top left / auto no-repeat;
+            background: url('../img/kite1.png') top left / auto no-repeat;
         }
 
         &-item2 {
@@ -54,7 +54,7 @@
         }
 
         &-item4 {
-            background: url('../img/kite1.png') top left / auto no-repeat;
+            background: url('../img/kite4.png') top left / auto no-repeat;
         }
     }
 }

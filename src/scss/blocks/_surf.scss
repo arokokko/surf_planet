@@ -117,13 +117,13 @@
             &::before {
                 content: '12°07\'02.8\"N 109°11\'46.1\"E'; 
                 transform: rotate(-90deg);
+                transform-origin: left top;
                 position: absolute;
                 left: -25px;
                 bottom: 30%;
                 opacity: 0.1;
                 font-size: 18px;
                 letter-spacing: 8px;
-                width: 20px;
                 white-space: nowrap;
             }
         }

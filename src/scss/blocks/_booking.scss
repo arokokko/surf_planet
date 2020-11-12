@@ -33,7 +33,7 @@
     position: absolute;
     transform: rotate(-90deg) translate(-100%, 0);
     transform-origin: left top;
-    top: 0;
+    top: -4px;
     left: 0;
 }
 
@@ -42,6 +42,7 @@
     font-weight: 800;
     font-size: 40px;
     letter-spacing: 6px;
+    line-height: 1;
 }
 
 .total {
