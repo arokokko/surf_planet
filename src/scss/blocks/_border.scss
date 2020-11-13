@@ -1,0 +1,40 @@
+.border {
+    height: 31px;
+    background-color: #171919;
+    position: relative;
+
+    &::after {
+        content: '';
+        width: 100%;
+        height: 100%;
+        opacity: 0.05;
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+
+    &-surf {
+        &::after {
+            background: url('../img/border-surf.png') left top / auto repeat-x;
+        }
+    }
+
+    &-kite {
+        &::after {
+            background: url('../img/border-kite.png') left top / auto repeat-x;
+        }
+    }
+
+    &-sup {
+        &::after {
+            background: url('../img/border-sup.png') left top / auto repeat-x;
+        }
+    }
+
+    &-shop {
+        &::after {
+            background: url('../img/border-shop.png') left top / auto repeat-x;
+        }
+    }
+}
+
