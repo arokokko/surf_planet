@@ -8,5 +8,7 @@ window.addEventListener('DOMContentLoaded', () => {
     carousel('.surf__carousel__wrapper', '.slider__item', '.next', '.prev');
     carousel('.kite__carousel__wrapper', '.slider__item', '.next', '.prev');
     carousel('.sup__carousel__wrapper', '.slider__item', '.next', '.prev');
+    carousel('.shop__carousel__wrapper', '.slider__item', '.next', '.prev');
+    
     calc();
 });

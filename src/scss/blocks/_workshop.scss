@@ -1,0 +1,94 @@
+.shop {
+    padding: 80px;
+    min-height: 100vh;
+    background-color: #171919;
+    position: relative;
+    overflow: hidden;
+    background-image: url('../img/workshop_bg.png');
+    background-position: bottom right;
+    background-repeat: no-repeat;
+    text-transform: uppercase;
+
+    &::after {
+        content: '';
+        height: 319px;
+        width: 264px;
+        position: absolute;
+        top: 40px;
+        right: 45px;
+        background-image: url('../img/maori_turtle_bg.png');
+        transform: rotate(-45deg);
+        opacity: 0.02;
+    }
+
+    &__info {
+        &-price {
+            font-weight: 800;
+            font-size: 32px;
+        }
+        &-stars {
+            margin-top: 50px;
+            margin-left: -15px;
+        }
+        &-btn {
+            margin-top: 100px;
+        }
+    }
+
+    &__carousel {
+
+        &-item {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        &-info {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        &-content {
+            min-width: 65%;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+        }
+    }
+
+    &__content {
+        &-extras {
+            min-width: 40%;
+        }
+    }
+
+    &__extras img {
+        display: block;
+        margin: 0 auto;
+    }
+
+    &__extras {
+        
+        &-title {
+            font-size: 28px;
+            font-weight: 800;
+        }
+        &-inner {
+            margin-top: 25px;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+        }
+        &-descr {
+            margin-top: 36px;
+            font-size: 18px;
+            text-align: center;
+            letter-spacing: 8px;
+            opacity: 0.5;
+        }
+    }
+    
+}
+.hide {
+    display: none;
+}
