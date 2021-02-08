@@ -8,13 +8,21 @@
     &__item {
         height: 100%;
         width: 100%;
-        position: relative;  
+        position: relative; 
+        display: flex;
+        justify-content: space-between; 
+        align-items: center;
+        
+        
+        &-img {
+            position: relative; 
+            top: 0;
+            left: 0;
+        }
         
         &-content {
-            max-width: 30%;
-            position: absolute;
-            top: 40%;
-            right: 0;
+            position: relative;
+            margin-left: -10%;
             font-size: 20px;
             line-height: 1.5;
             font-weight: 300;
