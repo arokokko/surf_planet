@@ -11,4 +11,6 @@ window.addEventListener('DOMContentLoaded', () => {
     carousel('.shop__carousel__wrapper', '.slider__item', '.next', '.prev');
     
     calc();
+        
+    
 });

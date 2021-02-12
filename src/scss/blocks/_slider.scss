@@ -8,11 +8,13 @@
     &__item {
         height: 100%;
         width: 100%;
-        position: relative; 
-        display: flex;
-        justify-content: space-between; 
-        align-items: center;
         
+        &-inner {
+            position: relative; 
+            display: flex;
+            justify-content: space-between; 
+            align-items: center;
+        }
         
         &-img {
             position: relative; 
