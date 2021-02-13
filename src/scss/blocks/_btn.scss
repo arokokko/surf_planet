@@ -102,3 +102,16 @@
         box-shadow: 0 0 5px 2px $green;
     }
 }
+
+@media (max-width: 1440px) {
+    .btn {
+        font-size: 27px;
+    }
+    .btn span {
+        padding: 12px 48px 12px 12px;
+        margin-left: 12px;
+    }
+    .btn span::after {
+        right: 13px;
+    }
+}

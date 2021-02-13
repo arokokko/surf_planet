@@ -101,3 +101,15 @@ a {
     opacity: 0.1;
 }
 
+@media (max-width: 1440px) {
+    .titleH2 {
+        font-size: 70px;
+    }
+    .titleH3 {
+        font-size: 35px;
+    }
+    .subtext {
+        font-size: 20px;
+    }
+}
+
