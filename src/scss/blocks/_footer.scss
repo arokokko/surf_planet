@@ -4,4 +4,27 @@
     background-color: #171919;
     position: relative;
     overflow: hidden;
+    padding: 34px 0;
+
+    &__logo {
+        width: 172px;
+        display: block;
+        margin: 0px auto;
+
+    }
+    &__logo img {
+        width: 100%;
+    }
+
+    &__rights {
+        margin-top: 10px;
+        font-weight: 300;
+        font-size: 12px;
+        line-height: 14px;
+        text-align: center;
+        letter-spacing: 1.05px;
+        text-transform: uppercase;
+        color: #FFFFFF;
+        opacity: 0.5;
+    }
 }
