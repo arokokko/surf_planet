@@ -1,11 +1,13 @@
-const carousel = (sliderSelector, slidesSelector, nextSelector, prevSelector, dotsWrapSelector, dotSelector) => {
+
+const carousel = (sliderSelector, hideTabs = false, slidesSelector ='.slider__item', nextSelector ='.next', prevSelector ='.prev', dotsWrapSelector, dotSelector) => {
     const slider = document.querySelector(sliderSelector),
         slides = slider.querySelectorAll(slidesSelector),
         next = slider.querySelector(nextSelector),
         prev = slider.querySelector(prevSelector),
         dotsWrap = slider.querySelector(dotsWrapSelector), 
-        dots = slider.querySelectorAll(dotSelector);
-        
+        dots = slider.querySelectorAll(dotSelector),
+        tabBoxes = document.querySelectorAll('.board__tab');
+   
     let slideIndex;
 
     showSlides(slideIndex = 0);
@@ -21,6 +23,12 @@ const carousel = (sliderSelector, slidesSelector, nextSelector, prevSelector, do
 
         slides.forEach(item => item.classList.add('hide'));
         slides[slideIndex].classList.remove('hide');
+
+        if (hideTabs) {
+            tabBoxes.forEach(item => {
+                item.classList.remove('active');
+            });
+        }
         
         if(dotsWrapSelector != undefined && dotSelector != undefined) {
             dots.forEach(item => item.classList.remove('dot-active'));
