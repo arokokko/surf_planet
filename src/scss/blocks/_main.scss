@@ -123,6 +123,7 @@
         bottom: 140px;
         text-transform: uppercase;
         text-align: right;
+        margin-left: 20px;
 
         &_subtitle {
             margin-bottom: 25px;
@@ -148,12 +149,6 @@
         &__slider_dots {
             right: 50px;
             bottom: 20px;
-        }
-        &__slider_dot {
-            width: 180px;
-        }
-        &__slider_dot:not(:last-child) {
-            margin-right: 35px;
         }
         &__arrows {
             left: 165px;
@@ -190,13 +185,91 @@
 }
 @media (max-width: 1280px) {
     .main {
-        &__map {
+        &__map svg {
             width: 500px;
             height: 250px;
-
         }
+        &__slider_dot {
+            width: 170px;
+        }
+        &__slider_dot:not(:last-child) {
+            margin-right: 30px;
+        }
+    }
+    .slider-item {
+        &__info {
+
+            &_title {
+                margin-bottom: 25px;
+            }
+        } 
+    }
+}
+
+@media (max-width: 1024px) {
+    .main__slider {
+        &_dot {
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            background-color: #fff;
+            &-number {
+                display: none;
+            }    
+            &-name {
+                display: none;
+            }
+        }
+    }
+    .dot-active {
+        background-color: $green;
+    }
+
+}
+@media(max-width: 800px) {
+    .main {
         &__map svg {
-            width: 100%;
+            display: none;
+        }
+        &__slider {
+            .main__slider {
+                &_dot {
+                    width: 18px;
+                    height: 18px;
+                }
+            }
+            &_dot:not(:last-child) {
+                margin-right: 18px;
+            }
+            &_dots {
+                right: 20px;
+                
+            }
+            &_arrows {
+                &-right {
+                    right: 20px;
+                }
+                &-left {
+                    right: 65px;
+                }
+            }
+        }
+        &__arrows {
+            left: 120px;
+        }
+    }
+    .slider-item {
+        &__info {
+            right: 20px;
+            bottom: 80px;
+        }
+    }
+    
+}
+@media(max-width: 486px) {
+    .main {
+        &__arrows{
+            display: none;
         }
     }
 }

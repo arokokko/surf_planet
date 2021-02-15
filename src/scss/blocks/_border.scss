@@ -38,3 +38,13 @@
     }
 }
 
+@media (max-width: 1280px) {
+    .border {
+        height: 25px;
+    
+        &::after {
+            background-position-y: 50%;
+        }
+    }
+}
+
