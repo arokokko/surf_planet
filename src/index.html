@@ -12,27 +12,48 @@
         <header class="header">
             <h1 class="header__title">surfing<br/> live</h1>
             <div class="header__aside">
-                <a href="#" class="header__aside_logo">
-                    <img src="img/logo.png" alt="logo">
-                </a>
+                
+                <div class="header__logo-burger">
+                    <a href="#" class="header__aside_logo">
+                        <img src="img/logo.png" alt="logo">
+                    </a>
+                    <div class="burger menu-icon">
+                        <div class="stick stick-1"></div>
+                        <div class="stick stick-2" ></div>
+                        <div class="stick stick-3"></div>
+                    </div>
+                </div>
+                <div class="nav">
+                    <div class="nav__content">
+                        <ul class="nav__list">
+                            <li class="nav__list-item"><a href="#" class="hover-target active-nav">Surfing</a></li>
+                            <li class="nav__list-item"><a href="#" class="hover-target">Kiting</a></li>
+                            <li class="nav__list-item"><a href="#" class="hover-target">SUP</a></li>
+                            <li class="nav__list-item"><a href="#" class="hover-target">Workshop</a></li>
+                            <li class="nav__list-item"><a href="#" class="hover-target">Contacts</a></li>
+                        </ul>
+                    </div>
+                </div>
+                
                 <nav class="header__menu">
-                    <a class="header__menu_item" href="#surf">
+                    <a class="header__menu_item nav__list-item active-nav" href="#surf">
                         <img src="./icons/surf_icon.svg" alt="surf" class="header__menu_img">
                         <div class="header__menu_descr">Surfing</div>
                     </a>
-                    <a class="header__menu_item" href="#kite">
+                    <a class="header__menu_item nav__list-item" href="#kite">
                         <img src="./icons/kite_icon.svg" alt="kite" class="header__menu_img">
                         <div class="header__menu_descr">Kiting</div>
                     </a>
-                    <a class="header__menu_item" href="#sup">
+                    <a class="header__menu_item nav__list-item" href="#sup">
                         <img src="./icons/sup_icon.svg" alt="SUP" class="header__menu_img">
                         <div class="header__menu_descr">SUP</div>
                     </a>
-                    <a class="header__menu_item" href="#shop">
+                    <a class="header__menu_item nav__list-item" href="#shop">
                         <img src="./icons/shop_icon.svg" alt="shop" class="header__menu_img">
                         <div class="header__menu_descr">Workshop</div>
                     </a>  
                 </nav>
+                	
                 <div>
                     <div class="header__date">
                         <span class="header__date-day" id="day">20</span> <br>
@@ -133,6 +154,7 @@
                     </div>
                 </div>
             </div>
+            
 
         </main>
 
@@ -662,7 +684,7 @@
             </div>
             <div class="footer__rights">© Surfing Live. All Rights Reserved.</div>
 
-        </footer> -->
+        </footer>  -->
 
     <script src="js/script.js"></script>
 </body>

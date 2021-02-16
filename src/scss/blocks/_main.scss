@@ -229,7 +229,8 @@
 @media(max-width: 800px) {
     .main {
         &__map svg {
-            display: none;
+            width: 500px;
+            height: 250px;
         }
         &__slider {
             .main__slider {
@@ -264,10 +265,18 @@
             bottom: 80px;
         }
     }
-    
+    body.nav-active .main__arrows,
+    body.nav-active .main__slider_arrows,
+    body.nav-active .main__map,
+    body.nav-active .main__slider_dots {
+        display: none;
+    }
 }
 @media(max-width: 486px) {
     .main {
+        &__map svg {
+            display: none;
+        }
         &__arrows{
             display: none;
         }
