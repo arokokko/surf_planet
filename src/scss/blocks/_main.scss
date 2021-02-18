@@ -271,6 +271,9 @@
     body.nav-active .main__slider_dots {
         display: none;
     }
+    body.nav-active {
+        overflow: hidden;
+    }
 }
 @media(max-width: 486px) {
     .main {

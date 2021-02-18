@@ -2,9 +2,9 @@ const calc = () => {
 
     getTotalPrice('.surf__booking_quantity', '.surf__booking_persons', '.surf__persons_btns', '.surf__quantity_btns', '.type', '#surf_total', 65);
 
-    getTotalPrice('.kite__booking_quantity', '.kite__booking_persons', '.kite__persons_btns', '.kite__quantity_btns', '.type', '#kite_total', 50);
+    // getTotalPrice('.kite__booking_quantity', '.kite__booking_persons', '.kite__persons_btns', '.kite__quantity_btns', '.type', '#kite_total', 50);
 
-    getTotalPrice('.sup__booking_quantity', '.sup__booking_persons', '.sup__persons_btns', '.sup__quantity_btns', '.type', '#sup_total', 45);
+    // getTotalPrice('.sup__booking_quantity', '.sup__booking_persons', '.sup__persons_btns', '.sup__quantity_btns', '.type', '#sup_total', 45);
 
     function getTotalPrice(quantitySel, personsSel, personsBtnsSel, quantityBtnsSel, valueSel, totalSel, rate) {
         const quantity = document.querySelector(quantitySel),
