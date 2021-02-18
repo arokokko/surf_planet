@@ -8,7 +8,8 @@ const carousel = (sliderSelector, hideTabs = false, slidesSelector ='.slider__it
         dots = slider.querySelectorAll(dotSelector),
         tabBoxes = document.querySelectorAll('.board__tab');
    
-    let slideIndex;
+    let slideIndex,
+        touchMoveDist = null;
 
     showSlides(slideIndex = 0);
 
@@ -63,6 +64,17 @@ const carousel = (sliderSelector, hideTabs = false, slidesSelector ='.slider__it
             }
         });
     }
+
+    document.addEventListener('touchstart', e => touchMoveDist = e.touches[0].clientX);
+    document.addEventListener('touchmove', e => {
+        let x = e.touches[0].clientX;
+        if (!touchMoveDist) {
+            return
+        } else if (Math.abs(touchMoveDist - x) > 50) {
+            touchMoveDist = (touchMoveDist - x) < 0 ? plusSlide(-1) : plusSlide(1);
+            touchMoveDist = null;
+        }
+    });
 };
 
 export default carousel;
