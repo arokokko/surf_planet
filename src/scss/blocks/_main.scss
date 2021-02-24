@@ -140,10 +140,6 @@
     }
 }
 
-.dot-active {
-    border-top: 4px solid $green;
-}
-
 @media (max-width: 1440px) {
     .main {
         &__slider_dots {
@@ -209,22 +205,36 @@
 @media (max-width: 1024px) {
     .main__slider {
         &_dot {
-            width: 20px;
-            height: 20px;
+            width: 18px;
+            height: 18px;
             border-radius: 50%;
             background-color: #fff;
+            border-top: none;
+
+            &:not(:last-child) {
+                margin-right: 18px;
+            }
+
             &-number {
                 display: none;
             }    
+
             &-name {
                 display: none;
             }
         }
-    }
-    .dot-active {
-        background-color: $green;
+        
     }
 
+    body.nav-active .main__arrows,
+    body.nav-active .main__slider_arrows,
+    body.nav-active .main__map,
+    body.nav-active .main__slider_dots {
+        display: none;
+    }
+    body.nav-active {
+        overflow: hidden;
+    }
 }
 @media(max-width: 800px) {
     .main {
@@ -233,15 +243,8 @@
             height: 250px;
         }
         &__slider {
-            .main__slider {
-                &_dot {
-                    width: 18px;
-                    height: 18px;
-                }
-            }
-            &_dot:not(:last-child) {
-                margin-right: 18px;
-            }
+            
+            
             &_dots {
                 right: 20px;
                 
@@ -265,15 +268,7 @@
             bottom: 80px;
         }
     }
-    body.nav-active .main__arrows,
-    body.nav-active .main__slider_arrows,
-    body.nav-active .main__map,
-    body.nav-active .main__slider_dots {
-        display: none;
-    }
-    body.nav-active {
-        overflow: hidden;
-    }
+    
 }
 @media(max-width: 486px) {
     .main {

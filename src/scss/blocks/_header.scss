@@ -140,11 +140,8 @@
         }
     }
 }
-@media (max-width: 800px) {
+@media (max-width: 1024px) {
     .header {
-        &__title {
-            font-size: 105px;
-        }
         &__menu {
             display: none;
             &_item img {
@@ -168,6 +165,15 @@
                 left: 4px;
             }
         }
+    }
+}
+@media (max-width: 800px) {
+    .header {
+        &__title {
+            font-size: 105px;
+        }
+        
+        
     }
     
 }

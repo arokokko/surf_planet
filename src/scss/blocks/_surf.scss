@@ -9,11 +9,12 @@
         &::after {
             content: '';
             height: 350px;
-            width: 149px;
+            width: 150px;
             position: absolute;
             top: 80px;
             right: 0;
             background-image: url('../icons/map_poi_icon.svg');
+            background-size: contain;
         }
     
         &::before {
@@ -21,15 +22,31 @@
             width: 500px;
             height: 500px;
             position: absolute;
-            top: 45%;
+            bottom: 0;
             right: 5%;
             opacity: 0.2;
             background-image: url('../img/surf_fins.png');
+            background-size: contain;
         }
     
     &__slider {
-        margin-top: 80px;
-        
+
+        margin-bottom: 80px;
+
+        &_dots {
+            display: none;
+        }
+        &_dot {
+            width: 18px;
+            height: 18px;
+            border-radius: 50%;
+            background-color: #fff;
+
+        }
+        &_dot:not(:last-child) {
+            margin-right: 18px;
+        }
+
         &_wrapper {
             width: 100%;
             margin-right: 40px;
@@ -84,7 +101,7 @@
             &-title {
                 font-size: 40px;
                 font-weight: 800;
-                max-width: 150px;
+                // max-width: 150px;
                 line-height: 1;
             }
 
@@ -126,23 +143,8 @@
                 letter-spacing: 8px;
                 white-space: nowrap;
             }
+            
         }
-
-        // &-item1 {
-        //     background: url('../img/surf1.png') top left / auto no-repeat;
-        // }
-
-        // &-item2 {
-        //     background: url('../img/surf2.png') top left / auto no-repeat;
-        // }
-
-        // &-item3 {
-        //     background: url('../img/surf3.png') top left / auto no-repeat;
-        // }
-
-        // &-item4 {
-        //     background: url('../img/surf4.png') top left / auto no-repeat;
-        // }
     }
 
     &__booking {
@@ -160,4 +162,201 @@
         background-color: rgba(#1c2121, 0.3);
     }
     
+}
+@media (max-width: 1440px) {
+    .surf {
+        &::after {
+            height: 280px;
+            width: 120px;
+        }
+        &__slider{
+            &_inner {
+                min-height: 550px;
+                padding: 50px 0 0 30px;
+                &-title {
+                    font-size: 36px;
+                    max-width: 200px;
+                }
+                &-location {
+                    font-size: 16px;
+                    letter-spacing: 6px;
+                    left: 30px;
+                    width: 12px;
+                }
+                &-btn .btn {
+                    font-size: 27px;
+                }
+                &-btn .btn span {
+                    padding: 15px 45px 15px 15px;
+                    margin-left: 15px;
+                }
+                &-btn .btn span::after {
+                    width: 20px;
+                    height: 17px;
+                    background-size: contain;
+                }
+                &-btn span::before {
+                    width: 18px;
+                    left: -8px;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 1280px) {
+    .surf {
+        padding: 40px;
+        padding-top: 60px;
+        &::after {
+            top: 60px;
+            height: 210px;
+            width: 90px;
+        }
+        &__slider{
+            &_item:nth-child(n + 2) {
+                margin-left: -20px;
+            }
+            &_inner {
+                min-height: 480px;
+                padding: 40px 0 0 30px;
+
+                &-location {
+                    font-size: 14px;
+                }
+
+                &-title {
+                    font-size: 30px;
+                    max-width: 150px;
+                }
+
+                &-btn {
+                    left: 20%;
+                }
+                &-btn .btn {
+                    font-size: 22px;
+                }
+                &-btn .btn span {
+                    padding: 10px 35px 10px 10px;
+                }
+                &-btn .btn span::after {
+                    width: 18px;
+                    height: 15px;
+                    right: 10px;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 1024px) {
+    .surf {
+        &__slider {
+
+            &_dots {
+                display: flex;
+                justify-content: flex-end;
+            }
+            &_wrapper {
+                justify-content: space-around;
+                flex-wrap: wrap;
+            }
+            &_item {
+                width: 290px;
+            }
+
+            &_inner {
+                &-btn .btn {
+                    font-size: 27px;
+                }
+                &-btn .btn span {
+                    padding: 12px 48px 12px 12px;
+                    margin-left: 12px;
+                }
+                &-btn .btn span::after {
+                    right: 13px;
+                }
+            }
+        }
+        
+    }
+}
+
+@media (max-width: 800px) {
+    .surf {
+        &__carousel {
+
+            &__wrapper {
+                &::before {
+                    left: -20px;
+                    bottom: 50%;
+                    font-size: 14px;
+                    letter-spacing: 6px;
+                }
+                
+            }
+        }
+        
+    }
+}
+
+@media (max-width: 640px) {
+    .surf {
+        padding: 20px;
+        padding-top: 50px;
+        &::after {
+            height: 140px;
+            width: 60px;
+            top: 50px;
+        }
+        &::before {
+            width: 400px;
+            height: 400px;
+        }
+
+        &__slider {
+            
+            &_item:nth-child(4n + 3) {
+                margin-top: 0px;
+            }
+            &_item:nth-child(n + 2) {
+                margin-left: 0px;
+                margin-top: 20px;
+            }
+        }
+        &__carousel {
+            &__wrapper {
+                &::before {
+                    left: -13px;
+                    bottom: 65%;
+                    font-size: 12px;
+                    letter-spacing: 3px;
+                }  
+            }
+        }
+    }
+}
+
+@media (max-width: 486px) {
+    .surf {
+        padding-top: 40px;
+        &::after {
+            height: 105px;
+            width: 45px;
+            top: 40px;
+        }
+        &::before {
+            width: 300px;
+            height: 300px;
+        }
+        &__carousel {
+            &__wrapper {
+                &::before {
+                    bottom: 50%;
+                    font-size: 10px;
+                    letter-spacing: 2px;
+                }  
+            }
+        }
+    }
 }

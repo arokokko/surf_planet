@@ -101,6 +101,10 @@ a {
     opacity: 0.1;
 }
 
+.dot-active {
+    border-top: 4px solid $green;
+}
+
 @media (max-width: 1440px) {
     .titleH2 {
         font-size: 70px;
@@ -111,6 +115,9 @@ a {
     .subtext {
         font-size: 20px;
     }
+    .shadow {
+        font-size: 150px;
+    }
 }
 
 @media (max-width: 1280px) {
@@ -120,13 +127,28 @@ a {
     .titleH3 {
         font-size: 32px;
     }
+    .shadow {
+        font-size: 120px;
+    }
 }
+
+@media (max-width: 1024px) {
+    .dot-active {
+        border: none;
+        background-color: $green !important;
+        box-shadow: 0 0 8px rgba($green, 0.5);
+    }
+}
+
 @media (max-width: 800px) {
     .titleH2 {
         font-size: 50px;
     }
     .titleH3 {
         font-size: 27px;
+    }
+    .shadow {
+        font-size: 105px;
     }
     .subtext {
         font-size: 16px;
@@ -138,6 +160,14 @@ a {
         }
     }
 }
+
+@media (max-width: 640px) {
+    .shadow {
+        font-size: 75px;
+    }
+    
+}
+
 @media (max-width: 486px) {
     .titleH2 {
         font-size: 42px;

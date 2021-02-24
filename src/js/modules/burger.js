@@ -28,7 +28,7 @@ const burgerMenu = () => {
             return toggleClass();
         });
         menuItems.forEach(item => {
-            // body.classList.contains('nav-active') ? body.style.marginRight = scrollWidth + 'px' : body.style.marginRight = '';
+            
             item.addEventListener('click', function() {
                 toggleBurgerSticks();
                 return toggleClass();

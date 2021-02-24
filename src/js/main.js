@@ -8,7 +8,7 @@ window.addEventListener('DOMContentLoaded', () => {
     date();
     burgerMenu();
     carousel('.main__slider', false, '.slider-item', '.next', '.prev', '.main__slider_dots', '.main__slider_dot');
-    carousel('.surf__carousel__wrapper');
+    carousel('.surf__carousel__wrapper', false, '.slider__item', '.next', '.prev', '.surf__slider_dots', '.surf__slider_dot');
     // carousel('.kite__carousel__wrapper');
     // carousel('.sup__carousel__wrapper');
     // carousel('.shop__carousel__wrapper', true);

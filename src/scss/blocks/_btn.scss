@@ -11,6 +11,11 @@
         display: inline-block;
         margin-left: 19px;
         position: relative;
+        border-radius: 4px;
+
+        &:hover {
+            box-shadow: 0 0 10px $green;
+        }
 
         &::before {
             content: '';
@@ -101,6 +106,24 @@
     &:hover::after {
         box-shadow: 0 0 5px 2px $green;
     }
+
+}
+
+@media (max-width: 1024px) {
+    .plus {
+        &:hover::before {
+            box-shadow: none;
+        }
+    
+        &:hover::after {
+            box-shadow: none;
+        }
+    }
+    .minus {
+        &:hover::before {
+            box-shadow: none;
+        } 
+    }
 }
 
 @media (max-width: 800px) {
@@ -114,4 +137,5 @@
     .btn span::after {
         right: 13px;
     }
+    
 }

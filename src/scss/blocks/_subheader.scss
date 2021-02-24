@@ -15,4 +15,54 @@
             margin-top: 20px;
         }
     }
+} 
+
+@media (max-width: 1280px) {
+    .subheader {
+        &__title {
+            &_shadow {
+                margin-left: -6%;
+            }
+        }
+    }
+} 
+
+@media (max-width: 1024px) {
+    .subheader {
+        &__title {
+            &_shadow {
+                margin-left: -12%;
+            }
+        }
+    }
+} 
+
+// @media (max-width: 800px) {
+//     .subheader {
+//         &__title {
+//             &_shadow {
+//                 margin-left: -16%;
+//             }
+//         }
+//     }
+// } 
+
+@media (max-width: 640px) {
+    .subheader {
+        &__title {
+            &_shadow {
+                margin-left: -10%;
+            }
+        }
+    }
+} 
+
+@media (max-width: 486px) {
+    .subheader {
+        &__title {
+            &_shadow {
+                margin-left: -12%;
+            }
+        }
+    }
 }
