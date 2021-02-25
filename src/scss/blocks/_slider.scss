@@ -1,6 +1,6 @@
 .slider {
     
-    &__wrapper {
+    &__wrapper { 
         // min-height: 780px;
         position: relative;
     }
@@ -73,6 +73,20 @@
         z-index: 2;
     }
 
+    &_dots {
+        display: none;
+    }
+    &_dot {
+        width: 18px;
+        height: 18px;
+        border-radius: 50%;
+        background-color: #fff;
+        cursor: pointer;
+    }
+    &_dot:not(:last-child) {
+        margin-right: 18px;
+    }
+
     
 }
 
@@ -133,6 +147,10 @@
             margin-top: -40px;
             left: 40px;
             position: relative;
+        }
+        &_dots {
+            display: flex;
+            justify-content: flex-end;
         }
     }
 }

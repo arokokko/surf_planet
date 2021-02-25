@@ -109,9 +109,12 @@
 
         &:not(:last-child) {
             margin-right: 40px;
-        }
-        
+        }        
     }
+    &_dot.dot-active {
+        border-top: 4px solid $green;
+    }
+
 }
 .slider-item {
     height: 100%;
@@ -210,6 +213,13 @@
             border-radius: 50%;
             background-color: #fff;
             border-top: none;
+
+            &:hover {
+                .main__slider_dot-number,
+                .main__slider_dot-name {
+                    text-shadow: none;
+                }
+            }
 
             &:not(:last-child) {
                 margin-right: 18px;

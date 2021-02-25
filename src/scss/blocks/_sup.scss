@@ -14,6 +14,7 @@
         top: 50px;
         right: 45px;
         background-image: url('../img/maori_gibiskus_bg.png');
+        background-size: contain;
         transform: rotate(45deg);
         opacity: 0.02;
 
@@ -28,6 +29,7 @@
         right: 0;
         opacity: 0.3;
         background-image: url('../img/sup_paddle.png');
+        background-size: contain;
         
     }
 
@@ -39,21 +41,77 @@
         text-align: center;
     }
 
-    // &__carousel {
-    //     &-item1 {
-    //         background: url('../img/sup1.png') top left / auto no-repeat;
-    //     }
+}
 
-    //     &-item2 {
-    //         background: url('../img/sup3.png') top left / auto no-repeat;
-    //     }
+@media (max-width: 1280px) {
+    .sup {
+        padding: 40px;
+        padding-top: 60px;
+        &::after {
+            width: 229px;
+            height: 227px;
+            top: 25px;
+            right: 20px;
+        }
+        // &::before {
+        //     width: 256px;
+        //     height: 460px;
+        //     right: 10%;
+        // }
+    }
+}
 
-    //     &-item3 {
-    //         background: url('../img/sup2.png') top left / auto no-repeat;
-    //     }
+@media (max-width: 1024px) {
+    .sup {
+        &::after {
+            width: 190px;
+            height: 188px;
+            top: 20px;
+            right: 5px;
+        }
+//         &::before {
+//             width: 212px;
+//             height: 380px;
+//             right: 7%;
+//         }
+        &__carousel {
+            &__wrapper {
+                margin-top: 40px;
+            }
+        }
+    }
+}
 
-    //     &-item4 {
-    //         background: url('../img/sup4.png') top left / auto no-repeat;
-    //     }
-    // }
+@media (max-width: 800px) {
+    .sup {
+        &::before {
+            width: 600px;
+            height: 284px;
+        }
+    }
+}
+
+@media (max-width: 640px) {
+    .sup {
+        padding: 20px;
+        padding-top: 50px;
+        &::after {
+            width: 150px;
+            height: 149px;
+        }
+        &::before {
+            width: 464px;
+            height: 219px;
+        }
+    }
+}
+
+@media (max-width: 486px) {
+    .sup {
+        padding-top: 40px;
+        &::before {
+            width: 315px;
+            height: 149px;
+        }
+    }
 }

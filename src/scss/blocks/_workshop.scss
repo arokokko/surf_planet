@@ -5,6 +5,7 @@
     position: relative;
     overflow: hidden;
     background-image: url('../img/workshop_bg.png');
+    background-size: contain;
     background-position: bottom right;
     background-repeat: no-repeat;
     text-transform: uppercase;
@@ -17,6 +18,7 @@
         top: 40px;
         right: 45px;
         background-image: url('../img/maori_turtle_bg.png');
+        background-size: contain;
         transform: rotate(-45deg);
         opacity: 0.02;
     }
@@ -32,6 +34,12 @@
         }
         &-btn {
             margin-top: 100px;
+        }
+        &-gift {
+            display: none;
+            opacity: .5;
+            margin-top: 10px;
+            letter-spacing: 1px;
         }
     }
 
@@ -74,6 +82,7 @@
     &__extras {
         
         &-title {
+            text-align: center;
             font-size: 28px;
             font-weight: 800;
         }
@@ -89,6 +98,9 @@
             text-align: center;
             letter-spacing: 8px;
             opacity: 0.5;
+        }
+        &:not(:first-child) {
+            margin-left: 20px;
         }
     }
 }
@@ -166,4 +178,160 @@
 }
 .board__tab.active .board__tab-descr {
     display: block;
+}
+
+@media (max-width: 1280px) {
+    .shop {
+        padding: 40px;
+        padding-top: 60px;
+        &::after {
+            height: 260px;
+            width: 215px;
+            top: 15px;
+            right: 40px;
+                
+        }
+        &__content {
+            &-extras {
+                min-width: 0px;
+            }
+        }
+        &__extras {
+            &-inner {
+                flex-direction: column;
+            }
+            &-descr {
+                margin-top: 24px;
+            }
+            &:not(:first-child) {
+                margin-left: 0px;
+                margin-top: 30px;
+            }
+        }
+    }
+    .board {
+        &__tab {    
+            &-middle {
+                top: 58%;
+                left: 13%;
+            }
+    
+            &-top {
+                top: 14%;
+                left: 22%;
+            }
+            &-top.long {
+                left: 20%;
+            }
+        }
+    }
+}
+
+@media (max-width: 1024px) {
+    .shop {
+        &::after {
+            width: 197px;
+            height: 228px;
+            top: 0px;
+        }
+        &__content {
+            &-extras {
+                display: none;
+            }
+            &-board img{
+                width: 100%;
+            }
+                
+        }
+        &__info {
+            &-gift {
+                display: block;
+            }
+        }
+        &__carousel {
+            &-content {
+                min-width: 0;
+                max-width: 50%;
+            }
+        }
+    }
+    .shop .slider_dots {
+        margin-top: 15px;
+    }
+    .board {
+        &__tab {    
+            &-bottom {
+                bottom: 9%;
+            }
+    
+            &-top {
+                top: 23%;
+            }
+        }
+    }
+}
+
+@media (max-width: 800px) {
+    .board {
+        &__tab {    
+            &-bottom {
+                bottom: 5%;
+            }
+    
+            &-top {
+                top: 23%;
+            }
+            &-descr {
+                font-size: 18px;
+            }
+            &-descr.subtext_right {
+                left: -65%;
+                top: -11px;
+            }
+        }
+    }
+}
+
+@media (max-width: 640px) {
+    .shop {
+        padding: 20px;
+        padding-top: 50px;
+
+        &::after {
+            width: 154px;
+            height: 180px;
+        }
+        &__carousel {
+            &-item {
+                flex-direction: column;
+            }
+            &-info {
+                margin-top: 20px;
+            }
+            &-content {
+                margin: 20px auto 0 auto;
+                max-width: 80%;
+            }
+        }
+        &__info {
+            &-stars {
+                margin-top: 20px;
+            }
+            &-price {
+                font-size: 25px;
+            }
+            &-btn {
+                margin-top: 30px;
+            }
+            &-gift {
+                font-size: 14px;
+            }
+        }
+    }
+}
+
+@media (max-width: 486px) {
+    .shop {
+        padding-top: 40px;
+    }
 }

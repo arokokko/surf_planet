@@ -101,9 +101,9 @@ a {
     opacity: 0.1;
 }
 
-.dot-active {
-    border-top: 4px solid $green;
-}
+// .dot-active {
+//     border-top: 4px solid $green;
+// }
 
 @media (max-width: 1440px) {
     .titleH2 {
@@ -152,10 +152,10 @@ a {
     }
     .subtext {
         font-size: 16px;
-        &_left {
+        &_left::before {
             top: 35%;
         }
-        &_right {
+        &_right::before {
             top: 35%;
         }
     }

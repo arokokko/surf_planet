@@ -1,8 +1,15 @@
 const tabs = (wrapper, dots ='.board__tab-circle', boxes ='.board__tab') => {
     const tabsWrapper = document.querySelector(wrapper),
         tabsDots = tabsWrapper.querySelectorAll(dots),
-        tabsBoxes = tabsWrapper.querySelectorAll(boxes);
+        tabsBoxes = tabsWrapper.querySelectorAll(boxes),
+        tabsDescr = tabsWrapper.querySelectorAll('.board__tab-descr');
 
+    if(window.innerWidth <= 1280) {
+        tabsDescr.forEach(item => {
+            item.classList.remove('subtext_left');
+            item.classList.add('subtext_right');
+        })
+    }
     function hideTabsContent() {
         tabsBoxes.forEach(item => {
             item.classList.remove('active');

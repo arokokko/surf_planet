@@ -33,20 +33,6 @@
 
         margin-bottom: 80px;
 
-        &_dots {
-            display: none;
-        }
-        &_dot {
-            width: 18px;
-            height: 18px;
-            border-radius: 50%;
-            background-color: #fff;
-
-        }
-        &_dot:not(:last-child) {
-            margin-right: 18px;
-        }
-
         &_wrapper {
             width: 100%;
             margin-right: 40px;
@@ -253,10 +239,6 @@
     .surf {
         &__slider {
 
-            &_dots {
-                display: flex;
-                justify-content: flex-end;
-            }
             &_wrapper {
                 justify-content: space-around;
                 flex-wrap: wrap;

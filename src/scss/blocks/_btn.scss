@@ -12,6 +12,7 @@
         margin-left: 19px;
         position: relative;
         border-radius: 4px;
+        transition: all .4s;
 
         &:hover {
             box-shadow: 0 0 10px $green;
@@ -110,6 +111,13 @@
 }
 
 @media (max-width: 1024px) {
+    .btn {    
+        span {
+            &:hover {
+                box-shadow: none;
+            }
+        }
+    }
     .plus {
         &:hover::before {
             box-shadow: none;
