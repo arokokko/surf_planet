@@ -5,6 +5,7 @@ const concat = require('gulp-concat');
 const autoprefixer = require("autoprefixer");
 const cleanCSS = require("gulp-clean-css");
 const postcss = require("gulp-postcss");
+const del = require('del');
 const browsersync = require("browser-sync");
 
 const dist = "./dist";
@@ -91,9 +92,14 @@ gulp.task("watch", () => {
     gulp.watch("./src/js/**/*.js", gulp.parallel("build-js"));
 });
 
+gulp.task("clean", () => {
+  return del(['dist/*']);
+});
+
 gulp.task("build", gulp.parallel("copy-html", "css", "copy-assets", "build-sass", "build-js"));
 
-gulp.task("prod", () => {
+gulp.task("prod", gulp.series("clean", () => {
+    
     gulp.src("./src/index.html")
         .pipe(gulp.dest(dist));
     gulp.src("./src/img/**/*.*")
@@ -135,6 +141,6 @@ gulp.task("prod", () => {
         .pipe(postcss([autoprefixer()]))
         .pipe(cleanCSS())
         .pipe(gulp.dest(dist + '/css'));
-});
+}));
 
-gulp.task("default", gulp.parallel("watch", "build"));
+gulp.task("default", gulp.series("clean", gulp.parallel("watch", "build")));
