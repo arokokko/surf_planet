@@ -1,0 +1,196 @@
+.cards {
+    padding: 2rem 5rem;
+    background-color: #171919;
+    position: relative;
+    overflow: hidden;
+
+    & .btn .span-second {
+        padding: 1.1rem 3rem 1.1rem 1.1rem;
+    }
+
+    &__slider {
+
+        &_wrapper {
+            width: 100%;
+            margin-right: 2.5rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        &_item {
+            border-radius: .5rem;
+            width: 25%;
+            position: relative;
+            text-transform: uppercase;
+            transition: all .4s;
+            will-change: transform;
+        }
+
+        &_wrapper:hover {
+            .cards__slider_item {
+                filter: grayscale(70%);
+            }
+        }
+        &_wrapper:hover {
+            .cards__slider_item:hover {
+                filter: none;
+                transform: translateZ(0) scale(1.03);
+
+                & .btn {
+                
+                    text-shadow: 0 0 15px white;
+                    
+                    & .span-second {
+                        box-shadow: 0 0 20px $green;
+            
+                        & .scanner {
+                            animation: loop 3s ease-in infinite;
+                        }
+                    }
+                }
+            }
+            
+        }
+
+        
+
+        &_item:nth-child(n + 2) {
+            margin-left: -1.5rem;
+        }
+
+        &_item:nth-child(4n + 1) {
+            margin-top: 2.5rem;
+        }
+
+        &_item:nth-child(4n + 3) {
+            margin-top: 7rem;
+        }
+
+        &_item1 {
+            background: url('../img/surf_slide1.png') center center / cover no-repeat;
+        }
+        &_item2 {
+            background: url('../img/surf_slide2.png') center center / cover no-repeat;
+        }
+        &_item3 {
+            background: url('../img/surf_slide3.png') center center / cover no-repeat;
+        }
+        &_item4 {
+            background: url('../img/surf_slide4.png') center center / cover no-repeat;
+        }
+
+        &_inner {
+            display: block;
+            min-height: 38rem;
+            background-color: rgba(#1c2121, 0.5);
+            padding: 3.2rem 0 0 2.4rem;
+            position: relative;
+            transition: all .4s;
+
+            
+
+            &-title {
+                font-size: 2.3rem;                
+                font-weight: 800;
+                max-width: 12rem;
+                line-height: 1;
+            }
+
+            &-location {
+                font-size: 1.2rem;
+                letter-spacing: .5rem;
+                transform: rotate(-90deg);
+                position: absolute;
+                left: 2.5rem;
+                bottom: 6.4rem;
+                width: 1.3rem;
+                white-space: nowrap;
+
+                span {
+                    font-weight: 100;
+                }
+            }
+
+            &-btn {
+                position: absolute;
+                bottom: 0;
+                left: 3rem;
+            }
+        }
+    }
+    .current_slide {
+        .cards__slider_inner {
+            background-color: rgba(#1c2121, 0.3);
+        }
+        
+    }
+}
+
+    
+@media (max-width: 999px) {
+    .cards {
+        padding: 2rem;
+        &__slider {
+
+            &_wrapper {
+                justify-content: space-around;
+                flex-wrap: wrap;
+            }
+            
+            &_wrapper:hover {
+                .cards__slider_item {
+                    filter: none;
+                }
+            }
+            &_wrapper:hover {
+                .cards__slider_item:hover {
+                    transform: none;
+
+                    & .btn {
+                
+                        text-shadow: none;
+                        
+                        & .span-second {
+                            box-shadow: 0 0 5px $green;
+                
+                            & .scanner {
+                                animation: none;
+                            }
+                        }
+                    }
+                }
+            }
+            &_item {
+                width: 290px;
+            }
+            &_item:nth-child(4n + 3) {
+                margin-top: 0px;
+            }
+            &_item:nth-child(n + 2) {
+                margin-left: 20px;
+                margin-top: 20px;
+            }
+
+        }
+        
+    }
+}
+
+    
+@media (max-width: 576px) {
+        .cards {
+            padding: 20px;
+            &__slider {
+                
+                &_item:nth-child(n + 2) {
+                    margin-left: 0px;
+                }
+            }
+    
+            
+            
+        }
+}
+    
+
