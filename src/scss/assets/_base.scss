@@ -1,3 +1,7 @@
+html {
+    font-size: 1vw;
+}
+
 * {
     box-sizing: border-box;
     margin: 0;
@@ -5,6 +9,7 @@
     font-family: 'Fira Sans', sans-serif;
     font-weight: 400;
     color: #fff;
+    
 }
 
 a {
@@ -27,38 +32,28 @@ a {
 }
 
 .titleH2 {
-    letter-spacing: 2px;
-    font-size: 80px;
+    letter-spacing: .2rem;
+    font-size: 4.3rem;
     font-weight: 800;
     text-transform: uppercase;
 }
 
 .titleH3 {
-    font-size: 40px;
+    font-size: 2.4rem;
     font-weight: 800;
     text-transform: uppercase;
-
+    letter-spacing: .15rem;
     span {
         font-weight: 100;
         opacity: 0.5;
     }
 }
 
-.above_line {
-    &::after {
-        content: '';
-        position: absolute;
-        top: 0;
-        right: 0;
-        width: 80px;
-        height: 1px;
-        background-color: $green;
-    }
-}
+
 
 .subtext {
     opacity: 0.5;
-    font-size: 22px;
+    font-size: 1.2rem;
     letter-spacing: 7px;
     display: inline-block;
     position: relative;
@@ -66,36 +61,36 @@ a {
 }
 
 .subtext_left {
-    padding-left: 103px;
+    padding-left: 7rem;
     &::before {
         content: '';
         position: absolute;
         background-color: #fff;
         opacity: 0.5;
-        width: 80px;
-        height: 2px;
+        width: 6.1rem;
+        height: .13rem;
         left: 0;
-        top: 45%;
+        top: 40%;
         
     }
 }
 
 .subtext_right {
-    padding-right: 103px;
+    padding-right: 7rem;
     &::after {
         content: '';
         position: absolute;
         background-color: #fff;
         opacity: 0.5;
-        width: 80px;
-        height: 2px;
+        width: 6.1rem;
+        height: .13rem;
         right: 0;
-        top: 45%;
+        top: 40%;
     }
 }
 
 .shadow {
-    font-size: 200px;
+    font-size: 10rem;
     font-weight: 800;
     line-height: 0.8;
     opacity: 0.1;
@@ -105,34 +100,11 @@ a {
 //     border-top: 4px solid $green;
 // }
 
-@media (max-width: 1440px) {
-    .titleH2 {
-        font-size: 70px;
-    }
-    .titleH3 {
-        font-size: 35px;
-    }
-    .subtext {
-        font-size: 20px;
-    }
-    .shadow {
-        font-size: 150px;
-    }
-}
 
-@media (max-width: 1280px) {
-    .titleH2 {
-        font-size: 65px;
+@media (max-width: 999px) {
+    html {
+        font-size: 14px;
     }
-    .titleH3 {
-        font-size: 32px;
-    }
-    .shadow {
-        font-size: 120px;
-    }
-}
-
-@media (max-width: 1024px) {
     .dot-active {
         border: none;
         background-color: $green !important;
@@ -140,7 +112,8 @@ a {
     }
 }
 
-@media (max-width: 800px) {
+
+@media (max-width: 786px) {
     .titleH2 {
         font-size: 50px;
     }
@@ -148,7 +121,7 @@ a {
         font-size: 27px;
     }
     .shadow {
-        font-size: 105px;
+        font-size: 7rem;
     }
     .subtext {
         font-size: 16px;
@@ -161,9 +134,9 @@ a {
     }
 }
 
-@media (max-width: 640px) {
+@media (max-width: 576px) {
     .shadow {
-        font-size: 75px;
+        font-size: 5.5rem;
     }
     
 }

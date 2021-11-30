@@ -7,11 +7,10 @@
 
     &__title {
         margin: 0;
-        max-width: 500px;
         text-transform: uppercase;
         font-weight: 800;
         line-height: 0.8;
-        font-size: 200px;
+        font-size: 10rem;
         opacity: 0.07;
         text-align: left;
     }
@@ -21,14 +20,14 @@
         top: 0;
         left: 0;
         z-index: 3;
-        width: 168px;
+        width: 8rem;
         height: 100vh;
-        border-right: 1px solid rgba(255, 255, 255, 0.25);
+        border-right: .1rem solid rgba(255, 255, 255, 0.25);
         display: flex;
         flex-direction: column;
         justify-content: space-between;
         align-items: center;
-        padding-bottom: 30px;
+        padding-bottom: 2rem;
 
         &_logo {
             width: 100%;
@@ -43,28 +42,33 @@
         flex-direction: column;
         align-items: center;
 
+        &_img,
+        &_descr {
+            transition: all 0.3s;
+        }
         &_item {
-            transition: all 0.5s;
-
             &:not(:first-child) {
-                margin-top: 25px;
+                margin-top: 1.5rem;
             }
 
             &:hover {
                 .header__menu_img {
-                    transform: translateY(-2px); 
+                    transform: translateY(2px); 
                 }
                 .header__menu_descr {
-                    transform: translateY(2px); 
+                    text-shadow: 0 0 1rem white;
                 }         
             }
         }
-
+        &_img {
+            width: 3.5rem;
+            height: auto;
+        }
         &_descr {
-            font-size: 12px;
+            font-size: 1.1rem;
             font-weight: 400;
             text-align: center;
-            margin-top: 3px;
+            margin-top: .2rem;
         }
     }
     &__logo-burger {
@@ -74,73 +78,40 @@
     }
 
     &__date {
-        font-size: 16px;
+        font-size: 1.2rem;
         font-weight: 300;
         line-height: 1;
-        letter-spacing: 1.4px;
+        letter-spacing: .1rem;
+        margin-top: 1rem;
 
         &-day {
-            font-size: 72px;
+            font-size: 3rem;
             font-weight: 800;
         }
     }
 
     &__location {
-        font-size: 12px;
+        font-size: 1.1rem;
         font-weight: 300;
         letter-spacing: 1.05px;
         position: relative;
-        padding-left: 19px;
-        margin-top: 20px;
+        padding-left: 1.3rem;
+        margin-top: 1rem;
 
         &::before {
             content: '';
-            height: 14px;
-            width: 11px;
+            height: 1.1rem;
+            width: .85rem;
             position: absolute;
             left: 0;
             top: 0;
-            background-image: url('../icons/map_marker_icon.svg');
+            background: url('../icons/map_marker_icon.svg') center center / contain no-repeat;
         }
     }
 
 }
 
-@media (max-width: 1440px) {
-    .header {
-        &__title {
-            font-size: 150px;
-        }
-        &__aside {
-            width: 120px;
-            padding-bottom: 20px;
-        }
-        &__date-day {
-            font-size: 45px;
-        }
-        &__menu_item:not(:first-child) {
-            margin-top: 17px;
-        }
-    }
-}
-
-@media (max-width: 1280px) {
-    .header {
-        &__title {
-            font-size: 120px;
-        }
-        &__aside {
-            width: 100px;
-        }
-        &__date-day {
-            font-size: 32px;
-        }
-        &__menu_item:not(:first-child) {
-            margin-top: 12px;
-        }
-    }
-}
-@media (max-width: 1024px) {
+@media (max-width: 999px) {
     .header {
         &__menu {
             display: none;
@@ -149,38 +120,35 @@
             }
         }
         &__aside {
-            width: 80px;
-        }
-        &__date {
-            font-size: 14px;
-            letter-spacing: 1.2px;
-            &-day {
-                font-size: 27px;
-            }
+            width: 6rem;
         }
         &__location {
-            margin-top: 14px;
-    
+            letter-spacing: 1px;
             &::before {
                 left: 4px;
             }
         }
+        &__date {
+            &-day {
+                font-size: 2.8rem;
+            }
+        }
     }
 }
-@media (max-width: 800px) {
+@media (max-width: 786px) {
     .header {
         &__title {
-            font-size: 105px;
+            font-size: 7rem;
         }
         
         
     }
     
 }
-@media (max-width: 640px) {
+@media (max-width: 576px) {
     .header {
         &__title {
-            font-size: 75px;
+            font-size: 5.5rem;
         }
     }
 }
