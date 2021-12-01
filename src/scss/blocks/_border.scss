@@ -1,5 +1,5 @@
 .border {
-    height: 31px;
+    height: 2.3rem;
     background-color: #171919;
     position: relative;
 
@@ -11,6 +11,7 @@
         position: absolute;
         top: 0;
         left: 0;
+        // background-position-y: 50%;
     }
 
     &-surf {
@@ -38,13 +39,4 @@
     }
 }
 
-@media (max-width: 1280px) {
-    .border {
-        height: 25px;
-    
-        &::after {
-            background-position-y: 50%;
-        }
-    }
-}
 
