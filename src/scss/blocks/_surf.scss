@@ -1,6 +1,6 @@
 .surf {
-    padding: 80px;
-    padding-top: 100px;
+    padding: 5rem;
+    padding-top: 4rem;
     min-height: 100vh;
     background-color: #171919;
     position: relative;
@@ -8,112 +8,25 @@
 
         &::after {
             content: '';
-            height: 350px;
-            width: 150px;
+            height: 20rem;
+            width: 8rem;
             position: absolute;
-            top: 80px;
+            top: 5rem;
             right: 0;
-            background-image: url('../icons/map_poi_icon.svg');
-            background-size: contain;
+            background: url('../icons/map_poi_icon.svg') center center / contain no-repeat;
         }
     
         &::before {
             content: '';
-            width: 500px;
-            height: 500px;
+            width: 39rem;
+            height: 39rem;
             position: absolute;
             bottom: 0;
             right: 5%;
             opacity: 0.2;
-            background-image: url('../img/surf_fins.png');
-            background-size: contain;
+            background: url('../img/surf_fins.png') center center / contain no-repeat;
         }
     
-    &__slider {
-
-        margin-bottom: 80px;
-
-        &_wrapper {
-            width: 100%;
-            margin-right: 40px;
-            // padding: 40px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-
-        &_item {
-            width: 25%;
-            position: relative;
-            text-transform: uppercase;
-        }
-
-        &_item:nth-child(n + 2) {
-            margin-left: -40px;
-        }
-
-        &_item:nth-child(4n + 1) {
-            margin-top: 32px;
-        }
-
-        &_item:nth-child(4n + 3) {
-            margin-top: 89px;
-        }
-
-        &_item1 {
-            background: url('../img/surf_slide1.png') center center / cover no-repeat;
-        }
-        &_item2 {
-            background: url('../img/surf_slide2.png') center center / cover no-repeat;
-        }
-        &_item3 {
-            background: url('../img/surf_slide3.png') center center / cover no-repeat;
-        }
-        &_item4 {
-            background: url('../img/surf_slide4.png') center center / cover no-repeat;
-        }
-
-        &_inner {
-            min-height: 650px;
-            background-color: rgba(#1c2121, 0.5);
-            padding: 65px 0 0 40px;
-            position: relative;
-            transition: all 0.5s;
-
-            &:hover {
-                background-color: rgba(#1c2121, 0.3);
-            }
-
-            &-title {
-                font-size: 40px;
-                font-weight: 800;
-                // max-width: 150px;
-                line-height: 1;
-            }
-
-            &-location {
-                font-size: 18px;
-                letter-spacing: 8px;
-                transform: rotate(-90deg);
-                position: absolute;
-                left: 40px;
-                bottom: 80px;
-                width: 18px;
-                white-space: nowrap;
-
-                span {
-                    font-weight: 100;
-                }
-            }
-
-            &-btn {
-                position: absolute;
-                bottom: 0;
-                left: 40px;
-            }
-        }
-    }
-
     &__carousel {
 
         &__wrapper {
@@ -122,156 +35,44 @@
                 transform: rotate(-90deg);
                 transform-origin: left top;
                 position: absolute;
-                left: -25px;
-                bottom: 30%;
+                left: -1.8rem;
+                bottom: 9rem;
                 opacity: 0.1;
-                font-size: 18px;
-                letter-spacing: 8px;
+                font-size: 1.2rem;
+                letter-spacing: .6rem;
                 white-space: nowrap;
             }
             
         }
     }
-
-    &__booking {
-        margin: 50px auto 60px auto;
-    }
-
-    &__btn {
-        text-align: center;
-    }
     
 }
 
-.current_slide {
-    .surf__slider_inner {
-        background-color: rgba(#1c2121, 0.3);
-    }
-    
-}
-@media (max-width: 1440px) {
+@media (max-width: 999px) {
     .surf {
-        &::after {
-            height: 280px;
-            width: 120px;
-        }
-        &__slider{
-            &_inner {
-                min-height: 550px;
-                padding: 50px 0 0 30px;
-                &-title {
-                    font-size: 36px;
-                    max-width: 200px;
-                }
-                &-location {
+        padding: 3rem;
+        &__carousel {
+
+            &__wrapper {
+                &::before {
+                    bottom: 40%;
                     font-size: 16px;
                     letter-spacing: 6px;
-                    left: 30px;
-                    width: 12px;
                 }
-                &-btn .btn {
-                    font-size: 27px;
-                }
-                &-btn .btn span {
-                    padding: 15px 45px 15px 15px;
-                    margin-left: 15px;
-                }
-                &-btn .btn span::after {
-                    width: 20px;
-                    height: 17px;
-                    background-size: contain;
-                }
-                &-btn span::before {
-                    width: 18px;
-                    left: -8px;
-                }
+                
             }
         }
     }
 }
 
-@media (max-width: 1280px) {
-    .surf {
-        padding: 40px;
-        padding-top: 60px;
-        &::after {
-            top: 60px;
-            height: 210px;
-            width: 90px;
-        }
-        &__slider{
-            &_item:nth-child(n + 2) {
-                margin-left: -20px;
-            }
-            &_inner {
-                min-height: 480px;
-                padding: 40px 0 0 30px;
-
-                &-location {
-                    font-size: 14px;
-                }
-
-                &-title {
-                    font-size: 30px;
-                    max-width: 150px;
-                }
-
-                &-btn {
-                    left: 20%;
-                }
-                &-btn .btn {
-                    font-size: 22px;
-                }
-                &-btn .btn span {
-                    padding: 10px 35px 10px 10px;
-                }
-                &-btn .btn span::after {
-                    width: 18px;
-                    height: 15px;
-                    right: 10px;
-                }
-            }
-        }
-    }
-}
-
-@media (max-width: 1024px) {
-    .surf {
-        &__slider {
-
-            &_wrapper {
-                justify-content: space-around;
-                flex-wrap: wrap;
-            }
-            &_item {
-                width: 290px;
-            }
-
-            &_inner {
-                &-btn .btn {
-                    font-size: 27px;
-                }
-                &-btn .btn span {
-                    padding: 12px 48px 12px 12px;
-                    margin-left: 12px;
-                }
-                &-btn .btn span::after {
-                    right: 13px;
-                }
-            }
-        }
-        
-    }
-}
-
-@media (max-width: 800px) {
+@media (max-width: 786px) {
     .surf {
         &__carousel {
 
             &__wrapper {
                 &::before {
                     left: -20px;
-                    bottom: 50%;
+                    bottom: 40%;
                     font-size: 14px;
                     letter-spacing: 6px;
                 }
@@ -282,7 +83,7 @@
     }
 }
 
-@media (max-width: 640px) {
+@media (max-width: 576px) {
     .surf {
         padding: 20px;
         padding-top: 50px;
@@ -292,25 +93,16 @@
             top: 50px;
         }
         &::before {
-            width: 400px;
-            height: 400px;
+            width: 33rem;
+            height: 33rem;
         }
 
-        &__slider {
-            
-            &_item:nth-child(4n + 3) {
-                margin-top: 0px;
-            }
-            &_item:nth-child(n + 2) {
-                margin-left: 0px;
-                margin-top: 20px;
-            }
-        }
+        
         &__carousel {
             &__wrapper {
                 &::before {
                     left: -13px;
-                    bottom: 65%;
+                    bottom: 45%;
                     font-size: 12px;
                     letter-spacing: 3px;
                 }  
@@ -328,17 +120,9 @@
             top: 40px;
         }
         &::before {
-            width: 300px;
-            height: 300px;
+            width: 28rem;
+            height: 28rem;
         }
-        &__carousel {
-            &__wrapper {
-                &::before {
-                    bottom: 50%;
-                    font-size: 10px;
-                    letter-spacing: 2px;
-                }  
-            }
-        }
+        
     }
 }
