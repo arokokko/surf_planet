@@ -1,23 +1,31 @@
 .booking {
     text-transform: uppercase;
-    padding: 0 20px 0 20px;
+    padding: 2.5rem;
     display: flex;
     justify-content: space-between;
+    width: 100%;
+
+    &__wrapper {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+    }
 
     &__item {
         position: relative;
-        min-height: 220px;
-        width: 350px;
+        min-height: 18rem;
+        width: 25rem;
 
         &_btn {
             
             &-minus {
-                top: 55px;
-                right: 50%;
+                top: 4.2rem;
+                right: 55%;
             }
 
             &-plus {
-                top: 55px;
+                top: 4.2rem;
                 left: 55%;
             }
         }
@@ -25,48 +33,36 @@
 }
 
 .sub {
-    font-size: 18px;
+    font-size: 1.4rem;
     display: inline-block;
     text-align: right;
-    letter-spacing: 8px;
+    letter-spacing: .7rem;
     opacity: 0.5;
     position: absolute;
     transform: rotate(-90deg) translate(-100%, 0);
     transform-origin: left top;
-    top: -4px;
+    top: -.3rem;
     left: 0;
 }
 
 .type {
-    padding-left: 35px;
+    padding-left: 2.5rem;
     font-weight: 800;
-    font-size: 40px;
-    letter-spacing: 6px;
+    font-size: 2.3rem;
+    letter-spacing: .4rem;
     line-height: 1;
 }
 
 .total {
-    margin-top: 14px;
-    font-size: 14px;
+    margin-top: 1rem;
+    font-size: 1rem;
     text-align: center;
-    letter-spacing: 5.25px;
+    letter-spacing: .5rem;
     opacity: 0.75;
 }
 
-@media (max-width: 1440px) {
-    .type {
-        font-size: 36px;
-    }
-}
 
-@media (max-width: 1280px) {
-    .type {
-        font-size: 30px;
-        letter-spacing: 4px;
-    }
-}
-
-@media (max-width: 1024px) {
+@media (max-width: 999px) {
     .type {
         font-size: 25px;
         letter-spacing: 1px;
@@ -82,22 +78,22 @@
     }
 }
 
-@media (max-width: 800px) {
+@media (max-width: 786px) {
     .booking {
         flex-direction: column;
-    
+        padding: 0 10px 25px 10px;
         &__item {
             min-height: 0px;
             &_btn {
             
                 &-minus {
                     top: 50%;
-                    right: 25%;
+                    right: 20%;
                 }
     
                 &-plus {
                     top: 50%;
-                    left: 80%;
+                    left: 90%;
                 }
             }
         }
@@ -123,21 +119,21 @@
         text-align: start;
     }
 }
-@media (max-width: 486px) {
+@media (max-width: 576px) {
     .booking {
-    
         &__item {
             &_btn {
             
                 &-minus {
-                    right: 40%;
+                    right: 35%;
                 }
     
                 &-plus {
-                    left: 65%;
+                    left: 72%;
                 }
             }
         }
+        
     }
     .sub {
         font-size: 15px;
@@ -151,8 +147,7 @@
     }
 
     .type {
-        padding-left: 5px;
-        font-size: 25px;
-        letter-spacing: 2px;
+        padding-left: 8px;
+        letter-spacing: 3px;
     }
 }
