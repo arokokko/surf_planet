@@ -4,8 +4,8 @@ const burgerMenu = () => {
         stick = document.querySelectorAll('.stick'),
         body = document.querySelector('body'),
         menu = document.querySelector('.menu-icon'),
-        menuItems = document.querySelectorAll('.nav__list-item'),
-        scrollWidth = window.innerWidth - document.documentElement.clientWidth;
+        // scrollWidth = window.innerWidth - document.documentElement.clientWidth,
+        menuItems = document.querySelectorAll('.nav__list-item');
 
     burgerIcon.addEventListener('click', toggleBurgerSticks);
 
@@ -24,7 +24,7 @@ const burgerMenu = () => {
 
     function applyListeners() {
         menu.addEventListener('click', function () {
-            (!body.classList.contains('nav-active')) ? body.style.marginRight = scrollWidth + 'px' : body.style.marginRight = '';
+            // (!body.classList.contains('nav-active')) ? body.style.marginRight = scrollWidth + 'px' : body.style.marginRight = '';
             return toggleClass();
         });
         menuItems.forEach(item => {
@@ -38,9 +38,7 @@ const burgerMenu = () => {
 
     function toggleClass() {
         body.classList.toggle('nav-active');
-        
     };   
-    
 }
 
 export default burgerMenu;
