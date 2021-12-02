@@ -1,6 +1,6 @@
 .kite {
-    // margin-top: 10px;
-    padding: 80px;
+    padding: 5rem;
+    padding-top: 4rem; 
     min-height: 100vh;
     background-color: #171919;
     position: relative;
@@ -9,13 +9,12 @@
 
     &::after {
         content: '';
-        width: 360px;
-        height: 320px;
+        width: 24rem;
+        height: 20rem;
         position: absolute;
-        top: 25px;
-        right: -25px;
-        background-image: url('../img/maori_shaka_bg.png');
-        background-size: contain;
+        top: 1rem;
+        right: 0;
+        background: url('../img/maori_shaka_bg.png') center center / contain no-repeat;
         transform: rotate(-20deg);
         opacity: 0.02;
 
@@ -23,45 +22,21 @@
 
     &::before {
         content: '';
-        width: 334px;
-        height: 600px;
-        position: absolute;
+        width: 20rem;
+        height: 35rem;
         bottom: 0;
         right: 15%;
+        position: absolute;
         opacity: 0.3;
-        background-image: url('../img/kite_bar.png');
-        background-size: contain;
+        background: url('../img/kite_bar.png') center center / contain no-repeat;
         
     }
 
-    &__booking {
-        margin: 50px auto 60px auto;
-    }
-
-    &__btn {
-        text-align: center;
-    }
-
 }
 
-@media (max-width: 1280px) {
+@media (max-width: 999px) {
     .kite {
-        padding: 40px;
-        padding-top: 60px;
-        &::after {
-            width: 320px;
-            height: 280px;
-        }
-        &::before {
-            width: 256px;
-            height: 460px;
-            right: 10%;
-        }
-    }
-}
-
-@media (max-width: 1024px) {
-    .kite {
+        padding: 3rem;
         &::after {
             width: 280px;
             height: 240px;
@@ -71,11 +46,7 @@
             height: 380px;
             right: 7%;
         }
-        &__carousel {
-            &__wrapper {
-                margin-top: 40px;
-            }
-        }
+        
     }
 }
 
@@ -85,15 +56,10 @@
             width: 234px;
             height: 200px;
         }
-        // &__carousel {
-        //     &__wrapper {
-        //         margin-top: 20px;
-        //     }
-        // }
     }
 }
 
-@media (max-width: 640px) {
+@media (max-width: 576px) {
     .kite {
         padding: 20px;
         padding-top: 50px;
@@ -101,11 +67,7 @@
             width: 186px;
             height: 160px;
         }
-        // &__carousel {
-        //     &__wrapper {
-        //         margin-top: 10px;
-        //     }
-        // }
+    
     }
 }
 
