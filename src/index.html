@@ -7,63 +7,63 @@
     <link rel="shortcut icon" href="img/favicon.ico" type="image/ico">
     <link rel="stylesheet" href="css/style.css">
 </head>
-<body>
+<body >
     
-        <header class="header">
-            <h1 class="header__title">surfing<br/> live</h1>
-            <div class="header__aside">
-                
-                <div class="header__logo-burger">
-                    <a href="/" class="header__aside_logo">
-                        <img src="img/logo.png" alt="logo">
-                    </a>
-                    <div class="burger menu-icon">
-                        <div class="stick stick-1"></div>
-                        <div class="stick stick-2"></div>
-                        <div class="stick stick-3"></div>
-                    </div>
-                </div>
-                <nav class="nav">
-                    <div class="nav__content">
-                        <ul class="nav__list">
-                            <li class="nav__list-item"><a href="#surf" class="hover-target active-nav">Surfing</a></li>
-                            <li class="nav__list-item"><a href="#kite" class="hover-target">Kiting</a></li>
-                            <li class="nav__list-item"><a href="#sup" class="hover-target">SUP</a></li>
-                            <li class="nav__list-item"><a href="#shop" class="hover-target">Workshop</a></li>
-                            <li class="nav__list-item"><a href="#" class="hover-target">Contacts</a></li>
-                        </ul>
-                    </div>
-                </nav>
-                
-                <nav class="header__menu">
-                    <a class="header__menu_item " href="#surf">
-                        <img src="icons/surf_icon.svg" alt="surf" class="header__menu_img">
-                        <div class="header__menu_descr">Surfing</div>
-                    </a>
-                    <a class="header__menu_item " href="#kite">
-                        <img src="./icons/kite_icon.svg" alt="kite" class="header__menu_img">
-                        <div class="header__menu_descr">Kiting</div>
-                    </a>
-                    <a class="header__menu_item " href="#sup">
-                        <img src="./icons/sup_icon.svg" alt="SUP" class="header__menu_img">
-                        <div class="header__menu_descr">SUP</div>
-                    </a>
-                    <a class="header__menu_item " href="#shop">
-                        <img src="./icons/shop_icon.svg" alt="shop" class="header__menu_img">
-                        <div class="header__menu_descr">Workshop</div>
-                    </a>  
-                </nav>
-                	
-                <div>
-                    <div class="header__date">
-                        <span class="header__date-day" id="day">20</span> <br>
-                        <span id="month">02</span> | <span id="year">2020</span>
-                    </div>
-                    <div class="header__location">Vietnam</div>
+    <header class="header">
+        <h1 class="header__title">surfing<br/> live</h1>
+        <div class="header__aside">
+            
+            <div class="header__logo-burger">
+                <a href="/" class="header__aside_logo">
+                    <img src="img/logo.png" alt="logo">
+                </a>
+                <div class="burger menu-icon">
+                    <div class="stick stick-1"></div>
+                    <div class="stick stick-2"></div>
+                    <div class="stick stick-3"></div>
                 </div>
             </div>
+            <nav class="nav">
+                <div class="nav__content">
+                    <ul class="nav__list">
+                        <li class="nav__list-item"><a href="#surf" class="hover-target active-nav">Surfing</a></li>
+                        <li class="nav__list-item"><a href="#kite" class="hover-target">Kiting</a></li>
+                        <li class="nav__list-item"><a href="#sup" class="hover-target">SUP</a></li>
+                        <li class="nav__list-item"><a href="#shop" class="hover-target">Workshop</a></li>
+                        <li class="nav__list-item"><a href="#" class="hover-target">Contacts</a></li>
+                    </ul>
+                </div>
+            </nav>
             
-        </header>
+            <nav class="header__menu">
+                <a class="header__menu_item " href="#surf">
+                    <img src="icons/surf_icon.svg" alt="surf" class="header__menu_img">
+                    <div class="header__menu_descr">Surfing</div>
+                </a>
+                <a class="header__menu_item " href="#kite">
+                    <img src="./icons/kite_icon.svg" alt="kite" class="header__menu_img">
+                    <div class="header__menu_descr">Kiting</div>
+                </a>
+                <a class="header__menu_item " href="#sup">
+                    <img src="./icons/sup_icon.svg" alt="SUP" class="header__menu_img">
+                    <div class="header__menu_descr">SUP</div>
+                </a>
+                <a class="header__menu_item " href="#shop">
+                    <img src="./icons/shop_icon.svg" alt="shop" class="header__menu_img">
+                    <div class="header__menu_descr">Workshop</div>
+                </a>  
+            </nav>
+                
+            <div>
+                <div class="header__date">
+                    <span class="header__date-day" id="day">20</span> <br>
+                    <span id="month">02</span> | <span id="year">2020</span>
+                </div>
+                <div class="header__location">Vietnam</div>
+            </div>
+        </div>
+        
+    </header>
 <!-- main section -->
         <main class="main">
             <div class="main__map">
@@ -751,6 +751,32 @@
             <div class="footer__rights">© Surfing Live 2021. All Rights Reserved.</div>
 
         </footer>  
+
+        <div class="modal" id="modal">
+            
+            <div class="modal__close" title="Close"></div>
+                
+            <div class="modal__content">
+                <form class="modal__list">
+                    <div class="modal__list-item">
+                        Your order is<span>2 surfing lessons for 2 people!</span> <br>
+                        Please fillout the form<br> and we'll contact you for details
+                    </div>
+                    <div class="modal__list-item">
+                        <input type="text" placeholder="Your name" id="name" required>
+                    </div>
+                    <div class="modal__list-item">
+                        <input type="tel" placeholder="Your phone" id="phone" required>
+                    </div>
+                    <div class="modal__list-item">
+                        <input type="email" placeholder="Your email" id="email" required>
+                    </div>
+                    <div class="modal__list-item">
+                        <button class="btn submit__btn" type="submit"><span class="span-first">book</span><span class="span-second">surf<span class="scanner"></span></span></button>
+                    </div>
+                </form>
+            </div>
+        </div>
 
     <script src="js/script.js"></script>
 </body>
