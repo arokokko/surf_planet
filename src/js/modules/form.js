@@ -16,6 +16,18 @@ export default () => {
         modalClose();
     });
 
+   
+    modal.addEventListener('touchstart', e => touchDistance = e.touches[0].clientY);
+    modal.addEventListener('touchmove', e => {
+        
+        let y = e.touches[0].clientY;
+        if (!touchDistance) {
+            return;
+        } else if ((Math.abs(touchDistance - y) > 200) && ((touchDistance - y) > 0)) {
+            modalClose();
+            touchDistance = null;
+        }
+    });
 
     function modalClose() {
         document.body.classList.remove('modal-active');
