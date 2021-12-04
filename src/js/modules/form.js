@@ -1,11 +1,17 @@
 export default () => {
     const modal = document.querySelector('#modal'),
-        scrollBar = window.innerWidth - document.documentElement.clientWidth;
+        scrollBar = window.innerWidth - document.documentElement.clientWidth,
+        modalOrderTitle = document.querySelector('#modal__list-order'),
+        modalBtnSpan = modal.querySelector('.span-second');
 
     let touchDistance = null;
 
-    document.querySelectorAll('.modal__btn').forEach(btn => {
-        btn.addEventListener('click', () => {
+    document.querySelectorAll('.modal__btn').forEach(button => {
+        button.addEventListener('click', () => {
+            const buttonHtml = button.querySelector('.span-second').innerHTML;
+
+            modalBtnSpan.innerHTML = buttonHtml;
+            modalOrderTitle.textContent = collectDataToModal(button);
             document.body.classList.add('modal-active');
             document.body.style.marginRight = `${scrollBar}px`;
             document.body.style.overflow = 'hidden';
@@ -37,6 +43,22 @@ export default () => {
         }, 0);
     }
 
+    function collectDataToModal(btn) {
+        const parent = btn.closest('[data-parent]'),
+            activityType = parent.querySelector('[data-type]'),
+            activityAmount = parent.querySelector('[data-amount]'),
+            persons = parent.querySelector('[data-person]');
+
+        if(!activityAmount) {
+            return activityType.textContent;
+        } else {
+            let amountNum = parseInt(activityAmount.textContent),
+                amountName = activityAmount.textContent.replace(/\d/g, '');
+
+            return `${amountNum} ${activityType.textContent}${amountName} for ${persons.textContent}!`;
+        }
+            
+    }
     
     
 };

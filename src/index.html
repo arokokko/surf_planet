@@ -293,15 +293,15 @@
                     </div>
                 </div>
 
-                <div class="booking__wrapper">
+                <div class="booking__wrapper" data-parent>
                     <div class="surf__booking booking" id="book_surf">
                         <div class="surf__booking_activity booking__activity booking__item">
                             <div class="booking__activity-sub sub">activity</div>
-                            <div class="booking__activity-type type">surfing</div>
+                            <div class="booking__activity-type type" data-type>surfing</div>
                         </div>
                         <div class="surf__booking_quantity booking__quantity booking__item">
                             <div class="booking__quantity-sub sub"># of lessons</div>
-                            <div id='surf_quan' class="booking__quantity-type type">3 lessons</div>
+                            <div id='surf_quan' class="booking__quantity-type type" data-amount>3 lessons</div>
                             <div class="surf__quantity_btns booking__btns">
                                 <button type='button' class="booking__item_btn-minus btn_booking minus"></button>
                                 <button type='button' class="booking__item_btn-plus btn_booking plus"></button>
@@ -309,7 +309,7 @@
                         </div>
                         <div class="surf__booking_persons booking__persons booking__item">
                             <div class="booking__persons-sub sub"># of persons</div>
-                            <div id='surf_pers' class="booking__persons-type type">2 persons</div>
+                            <div id='surf_pers' class="booking__persons-type type" data-person>2 persons</div>
                             <div class="surf__persons_btns booking__btns">
                                 <button type='button' class="booking__item_btn-minus btn_booking minus"></button>
                                 <button type='button' class="booking__item_btn-plus btn_booking plus"></button>
@@ -403,15 +403,15 @@
                     </div>
                 </div>
 
-                <div class="booking__wrapper">
+                <div class="booking__wrapper" data-parent>
                     <div class="kite__booking booking" id="book_kite">
                         <div class="kite__booking_activity booking__activity booking__item">
                             <div class="booking__activity-sub sub">activity</div>
-                            <div class="booking__activity-type type">kiting</div>
+                            <div class="booking__activity-type type" data-type>kiting</div>
                         </div>
                         <div class="kite__booking_quantity booking__quantity booking__item">
                             <div class="booking__quantity-sub sub"># of hours</div>
-                            <div class="booking__quantity-type type">3 hours</div>
+                            <div class="booking__quantity-type type" data-amount>3 hours</div>
                             <div class="kite__quantity_btns booking__btns">
                                 <button type='button' class="booking__item_btn-minus btn_booking minus"></button>
                                 <button type='button' class="booking__item_btn-plus btn_booking plus"></button>
@@ -420,7 +420,7 @@
                         </div>
                         <div class="kite__booking_persons booking__persons booking__item">
                             <div class="booking__persons-sub sub"># of persons</div>
-                            <div class="booking__persons-type type">2 persons</div>
+                            <div class="booking__persons-type type" data-person>2 persons</div>
                             <div class="kite__persons_btns booking__btns">
                                 <button type='button' class="booking__item_btn-minus btn_booking minus"></button>
                                 <button type='button' class="booking__item_btn-plus btn_booking plus"></button>
@@ -514,15 +514,15 @@
                     </div>
                 </div>
 
-                <div class="booking__wrapper">
+                <div class="booking__wrapper" data-parent>
                     <div class="sup__booking booking" id="book_sup">
                         <div class="sup__booking_activity booking__activity booking__item">
                             <div class="booking__activity-sub sub">activity</div>
-                            <div class="booking__activity-type type">paddle<br>boarding</div>
+                            <div class="booking__activity-type type" data-type>paddle <br>boarding</div>
                         </div>
                         <div class="sup__booking_quantity booking__quantity booking__item">
                             <div class="booking__quantity-sub sub"># of tours</div>
-                            <div class="booking__quantity-type type">3 tours</div>
+                            <div class="booking__quantity-type type" data-amount>3 tours</div>
                             <div class="sup__quantity_btns booking__btns">
                                 <button type='button' class="booking__item_btn-minus btn_booking minus"></button>
                                 <button type='button' class="booking__item_btn-plus btn_booking plus"></button>
@@ -531,7 +531,7 @@
                         </div>
                         <div class="sup__booking_persons booking__persons booking__item">
                             <div class="booking__persons-sub sub"># of persons</div>
-                            <div class="booking__persons-type type">2 persons</div>
+                            <div class="booking__persons-type type" data-person>2 persons</div>
                             <div class="sup__persons_btns booking__btns">
                                 <button type='button' class="booking__item_btn-minus btn_booking minus"></button>
                                 <button type='button' class="booking__item_btn-plus btn_booking plus"></button>
@@ -569,10 +569,10 @@
                     
                     <div class="slider__item animate__animated animate__fadeIn">
                         <div class="slider__item-inner shop__carousel-item">
-                            <div class="shop__carousel-info">
+                            <div class="shop__carousel-info" data-parent>
                                 <div>
                                     <div class="subtext_right subtext slider__subtext">style</div>
-                                    <h3 class="titleH3 slider__title">shortboard</h3>
+                                    <h3 class="titleH3 slider__title" data-type>shortboard</h3>
                                 </div>
                                 <div class="shop__info-stars">
                                     <img src="img/stars.png" alt="five stars rating">
@@ -581,7 +581,7 @@
                                 <div class="shop__info-btn">
                                     <button class="btn modal__btn" type="button"><span class="span-first">book</span><span class="span-second">short<span class="scanner"></span></span></button>
                                 </div>
-                                <div class="shop__info-gift">*get surfwax and bracelet as a gift</div>
+                                <div class="shop__info-gift">*get leash and fins as a gift</div>
                             </div>
                             
                             <div class="shop__carousel-content">
@@ -622,10 +622,10 @@
                     </div>
                     <div class="slider__item animate__animated animate__fadeIn">
                         <div class="slider__item-inner shop__carousel-item">
-                            <div class="shop__carousel-info">
+                            <div class="shop__carousel-info" data-parent>
                                 <div>
                                     <div class="subtext_right subtext slider__subtext">style</div>
-                                    <h3 class="titleH3 slider__title">malibu</h3>
+                                    <h3 class="titleH3 slider__title" data-type="">malibu</h3>
                                 </div>
                                 <div class="shop__info-stars">
                                     <img src="img/stars.png" alt="five stars rating">
@@ -675,10 +675,10 @@
                     </div>
                     <div class="slider__item animate__animated animate__fadeIn">
                         <div class="slider__item-inner shop__carousel-item">
-                            <div class="shop__carousel-info">
+                            <div class="shop__carousel-info" data-parent>
                                 <div>
                                     <div class="subtext_right subtext slider__subtext">style</div>
-                                    <h3 class="titleH3 slider__title">longboard</h3>
+                                    <h3 class="titleH3 slider__title" data-type="">longboard</h3>
                                 </div>
                                 <div class="shop__info-stars">
                                     <img src="img/stars.png" alt="five stars rating">
@@ -757,22 +757,23 @@
             <div class="modal__close" title="Close"></div>
                 
             <div class="modal__content">
-                <form class="modal__list">
+                <form class="modal__list" id="modal__form">
                     <div class="modal__list-item">
-                        Your order is<span>2 surfing lessons for 2 people!</span> <br>
+                        Your order is<span id="modal__list-order">2 surfing lessons for 2 people!</span> <br>
                         Please fillout the form<br> and we'll contact you for details
                     </div>
+                    <input type="text" hidden id="order" name="order">
                     <div class="modal__list-item">
-                        <input type="text" placeholder="Your name" id="name" required>
+                        <input type="text" placeholder="Your name" name="name" required>
                     </div>
                     <div class="modal__list-item">
-                        <input type="tel" placeholder="Your phone" id="phone" required>
+                        <input type="tel" placeholder="Your phone" name="phone" required>
                     </div>
                     <div class="modal__list-item">
-                        <input type="email" placeholder="Your email" id="email" required>
+                        <input type="email" placeholder="Your email" name="email" required>
                     </div>
                     <div class="modal__list-item">
-                        <button class="btn submit__btn" type="submit"><span class="span-first">book</span><span class="span-second">surf<span class="scanner"></span></span></button>
+                        <button class="btn submit__btn" type="submit"><span class="span-first">book</span><span class="span-second" >surf<span class="scanner"></span></span></button>
                     </div>
                 </form>
             </div>
