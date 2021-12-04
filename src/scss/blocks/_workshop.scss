@@ -1,5 +1,6 @@
 .shop {
-    padding: 80px;
+    padding: 5rem;
+    padding-top: 4rem;
     min-height: 100vh;
     background-color: #171919;
     position: relative;
@@ -12,34 +13,35 @@
 
     &::after {
         content: '';
-        height: 319px;
-        width: 264px;
         position: absolute;
-        top: 40px;
-        right: 45px;
-        background-image: url('../img/maori_turtle_bg.png');
-        background-size: contain;
+        height: 20rem;
+        width: 19rem;
+        top: 1rem;
+        right: 3rem;
+        background: url('../img/maori_turtle_bg.png') center center / contain no-repeat;
         transform: rotate(-45deg);
         opacity: 0.02;
     }
 
     &__info {
         &-price {
+            font-size: 2.4rem;
             font-weight: 800;
-            font-size: 32px;
+            text-transform: uppercase;
+            letter-spacing: .15rem;
         }
         &-stars {
-            margin-top: 50px;
-            margin-left: -15px;
+            margin-top: 3rem;
+            margin-bottom: 0.6rem;
         }
         &-btn {
-            margin-top: 100px;
+            margin-top: 8rem;
         }
         &-gift {
             display: none;
             opacity: .5;
-            margin-top: 10px;
-            letter-spacing: 1px;
+            margin-top: .8rem;
+            letter-spacing: .1rem;
         }
     }
 
@@ -53,14 +55,16 @@
         &-info {
             display: flex;
             flex-direction: column;
-            justify-content: center;
+            justify-content: flex-start;
+            margin-top: 5rem;
+            
         }
 
         &-content {
             min-width: 65%;
             display: flex;
             justify-content: space-between;
-            align-items: flex-end;
+            align-items: center;
         }
     }
 
@@ -71,6 +75,11 @@
 
         &-board {
             position: relative;
+
+            & > img {
+                max-width: 30rem;
+                height: auto;
+            }
         }
     }
 
@@ -83,24 +92,25 @@
         
         &-title {
             text-align: center;
-            font-size: 28px;
+            font-size: 2rem;
             font-weight: 800;
+            margin-bottom: 1rem;
         }
         &-inner {
-            margin-top: 25px;
             display: flex;
+            flex-direction: column;
             justify-content: space-between;
-            align-items: flex-end;
+            align-items: center;
         }
         &-descr {
-            margin-top: 36px;
-            font-size: 18px;
+            margin-top: 2rem;
+            font-size: 1.4rem;
             text-align: center;
-            letter-spacing: 8px;
+            letter-spacing: .6rem;
             opacity: 0.5;
         }
         &:not(:first-child) {
-            margin-left: 20px;
+            margin-top: 2rem;
         }
     }
 }
@@ -108,7 +118,7 @@
 .board {
     &__tab {
         position: absolute;
-        min-width: 360px;
+        min-width: 26rem;       
 
         &-middle {
             top: 50%;
@@ -117,10 +127,7 @@
 
         &-top {
             top: 14%;
-            left: 74%;
-        }
-        &-top.long {
-            left: 78%;
+            left: 18%;
         }
 
         &-bottom {
@@ -129,26 +136,33 @@
         }
 
         &-circle {
-            height: 20px;
-            width: 20px;
+            height: 1.6rem;
+            width: 1.6rem;
             border-radius: 50%;
             background-color: $green;
             position: relative;
             cursor: pointer;
-            box-shadow: 0px 0px 7px $green;
+            box-shadow: 0 0 .5rem $green;
         }
 
         &-descr {
-            font-size: 22px;
+            font-size: 1.5rem;
+            letter-spacing: .05rem;
             font-weight: 800;
             position: absolute;
-            top: -14px;
+            top: -1rem;
             left: 10%;
             display: none;
         }
 
         &-descr.subtext_right {
-            left: -72%;
+            left: 2rem;
+            background-color: rgba(23, 25, 25, 0.3);
+            border-radius: .5rem;
+            padding: .5rem;
+        }
+        &-descr.subtext_right::after {
+            display: none;
         }
     }
 
@@ -156,20 +170,20 @@
 
 .circle {
     &__minus {
-        width: 12px;
-        height: 2px;
+        width: 1rem;
+        height: .15rem;
         background-color: #fff;
         position: absolute;
-        top: 9px;
-        left: 4px;
+        top: .7rem;
+        left: .3rem;
     }
     &__plus {
-        width: 2px;
-        height: 12px;
+        width: .15rem;
+        height: 1rem;
         background-color: #fff;
         position: absolute;
-        top: 4px;
-        left: 9px;
+        top: .3rem;
+        left: .74rem;
     }
     
 }
@@ -180,59 +194,15 @@
     display: block;
 }
 
-@media (max-width: 1280px) {
-    .shop {
-        padding: 40px;
-        padding-top: 60px;
-        &::after {
-            height: 260px;
-            width: 215px;
-            top: 15px;
-            right: 40px;
-                
-        }
-        &__content {
-            &-extras {
-                min-width: 0px;
-            }
-        }
-        &__extras {
-            &-inner {
-                flex-direction: column;
-            }
-            &-descr {
-                margin-top: 24px;
-            }
-            &:not(:first-child) {
-                margin-left: 0px;
-                margin-top: 30px;
-            }
-        }
-    }
-    .board {
-        &__tab {    
-            &-middle {
-                top: 58%;
-                left: 13%;
-            }
-    
-            &-top {
-                top: 14%;
-                left: 22%;
-            }
-            &-top.long {
-                left: 20%;
-            }
-        }
-    }
-}
 
-@media (max-width: 1024px) {
+@media (max-width: 999px) {
     .shop {
+        min-height: 0;
+        padding: 3rem;
         &::after {
             width: 197px;
             height: 228px;
-            top: 0px;
+            top: 0;
         }
         &__content {
             &-extras {
@@ -256,7 +226,7 @@
         }
     }
     .shop .slider_dots {
-        margin-top: 15px;
+        margin-top: 1rem;
     }
     .board {
         &__tab {    
@@ -264,39 +234,62 @@
                 bottom: 9%;
             }
     
-            &-top {
-                top: 23%;
-            }
-        }
-    }
-}
-
-@media (max-width: 800px) {
-    .board {
-        &__tab {    
-            &-bottom {
-                bottom: 5%;
-            }
-    
-            &-top {
-                top: 23%;
-            }
-            &-descr {
-                font-size: 18px;
-            }
             &-descr.subtext_right {
-                left: -65%;
-                top: -11px;
+                left: -45%;
+            }
+            &-circle {
+                height: 2.2rem;
+                width: 2.2rem;
+            }
+            &-middle {
+                top: 45%;
+                left: 86%;
             }
         }
+        
+    }
+    .circle {
+        &__minus {
+            width: 1.4rem;
+            height: .2rem;
+            top: 1rem;
+            left: .4rem;
+        }
+        &__plus {
+            width: .2rem;
+            height: 1.4rem;
+            top: .4rem;
+            left: 1rem;
+        }
+        
     }
 }
 
-@media (max-width: 640px) {
+@media (max-width: 786px) {
+    .shop__info-price {
+        font-size: 27px;
+    }
+    .board {
+        &__tab { 
+            &-top .board,
+            &-bottom .board {
+                &__tab {    
+                    
+                    &-descr.subtext_right {
+                        left: 10%;
+                    }
+                }
+            }
+            
+        }
+    }
+
+}
+
+@media (max-width: 576px) {
     .shop {
         padding: 20px;
         padding-top: 50px;
-
         &::after {
             width: 154px;
             height: 180px;
@@ -310,7 +303,7 @@
             }
             &-content {
                 margin: 20px auto 0 auto;
-                max-width: 80%;
+                max-width: 90%;
             }
         }
         &__info {
@@ -328,10 +321,12 @@
             }
         }
     }
+   
 }
-
 @media (max-width: 486px) {
     .shop {
         padding-top: 40px;
     }
 }
+
+

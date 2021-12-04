@@ -9,6 +9,15 @@
     display: inline-flex;
     justify-content: flex-end;
     align-items: center;
+    background: transparent;
+    outline: none;
+    border: none;
+    cursor: pointer;
+
+    &:active, 
+    &:focus {
+        outline: none;
+    }
     &:hover {
         text-shadow: 0 0 15px white;
         & .span-second {
@@ -147,16 +156,16 @@
 
 }
 
-.modal__btn {
-    background: transparent;
-    outline: none;
-    border: none;
-    cursor: pointer;
+// .modal__btn {
+//     background: transparent;
+//     outline: none;
+//     border: none;
+//     cursor: pointer;
 
-    &:active, &:focus {
-        outline: none;
-    }
-}
+//     &:active, &:focus {
+//         outline: none;
+//     }
+// }
 
 @keyframes loop {
     0% {
