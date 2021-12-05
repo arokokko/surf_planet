@@ -2,7 +2,11 @@ export default () => {
     const modal = document.querySelector('#modal'),
         scrollBar = window.innerWidth - document.documentElement.clientWidth,
         modalOrderTitle = document.querySelector('#modal__list-order'),
-        modalBtnSpan = modal.querySelector('.span-second');
+        modalBtnSpan = modal.querySelector('.span-second'),
+        orderInput = modal.querySelector('#order'),
+        form = modal.querySelector('#modal__form'),
+        sendMsg = modal.querySelector('.modal-sending'),
+        errorMsg = modal.querySelector('.modal-error');
 
     let touchDistance = null;
 
@@ -11,6 +15,7 @@ export default () => {
             const buttonHtml = button.querySelector('.span-second').innerHTML;
 
             modalBtnSpan.innerHTML = buttonHtml;
+            orderInput.value = collectDataToModal(button);
             modalOrderTitle.textContent = collectDataToModal(button);
             document.body.classList.add('modal-active');
             document.body.style.marginRight = `${scrollBar}px`;
@@ -41,6 +46,8 @@ export default () => {
         setTimeout(() => {
             document.body.style.overflow = '';
         }, 0);
+        sendMsg.style.display = '';
+        errorMsg.style.display = '';
     }
 
     function collectDataToModal(btn) {
@@ -59,6 +66,27 @@ export default () => {
         }
             
     }
+
+    try {
+        form.addEventListener('submit', async (e) =>  {
+            e.preventDefault();
+            sendMsg.style.display = 'block';
+            await fetch('./mailer/smart.php', {
+                method: 'POST',
+                body: new FormData(form)
+            }).then(() => {
+                form.reset();
+                modalClose();
+            }).catch((e) => {
+                sendMsg.style.display = '';
+                errorMsg.style.display = 'block';
+                console.error(e);
+            })
+        })
+    } catch(e) {
+        console.error(e);
+    }
+    
     
     
 };

@@ -44,6 +44,7 @@
 			transform: translateY(1.5rem) rotate(-45deg) scale(1.1);
 		}
 	}
+	
 }
 
 
@@ -124,10 +125,6 @@
 	align-self: center;
 	padding: 2rem;
 }
-
-// body.modal-active {
-// 	overflow: hidden;
-// }
 
 body.modal-active .modal,
 body.modal-active .modal__content {
@@ -215,6 +212,13 @@ input {
 	border-radius: .4rem;
 	border: none;
 	outline: none;
+}
+
+.modal {
+	&-sending,
+	&-error {
+		display: none;
+	}
 }
 
 
