@@ -1,9 +1,9 @@
 
-const carousel = (sliderSelector, hideTabs = false, needMakeDots = true, slidesSelector ='.slider__item', nextSelector ='.next', prevSelector ='.prev', dotsWrapSelector = '.slider_dots', dotSelector = '.slider_dot') => {
+const carousel = (sliderSelector, hideTabs = false, needMakeDots = true, dotsWrapSelector = '.slider_dots', dotSelector = '.slider_dot') => {
     const slider = document.querySelector(sliderSelector),
-        slides = slider.querySelectorAll(slidesSelector),
-        next = slider.querySelector(nextSelector),
-        prev = slider.querySelector(prevSelector),
+        slides = slider.querySelectorAll('.slider__item'),
+        next = slider.querySelector('.next'),
+        prev = slider.querySelector('.prev'),
         dotsWrap = slider.querySelector(dotsWrapSelector), 
         tabBoxes = document.querySelectorAll('.board__tab');
    
@@ -35,7 +35,7 @@ const carousel = (sliderSelector, hideTabs = false, needMakeDots = true, slidesS
             if (n < 0) {
                 slideIndex = slides.length - 1;
             }
-
+            
             slides.forEach(item => item.classList.add('hide'));
             slides[slideIndex].classList.remove('hide');
 
@@ -80,11 +80,11 @@ const carousel = (sliderSelector, hideTabs = false, needMakeDots = true, slidesS
             });
         }
 
-        document.addEventListener('touchstart', e => touchDistance = e.touches[0].clientX);
-        document.addEventListener('touchmove', e => {
+        slider.addEventListener('touchstart', e => touchDistance = e.touches[0].clientX);
+        slider.addEventListener('touchmove', e => {
             let x = e.touches[0].clientX;
             if (!touchDistance) {
-                return
+                return;
             } else if (Math.abs(touchDistance - x) > 50) {
                 touchDistance = (touchDistance - x) < 0 ? plusSlide(-1) : plusSlide(1);
                 touchDistance = null;
@@ -94,7 +94,6 @@ const carousel = (sliderSelector, hideTabs = false, needMakeDots = true, slidesS
 
     switchSlides();
 
-    
 };
 
 export default carousel;
