@@ -1,12 +1,12 @@
 const calc = () => {
 
-    getTotalPrice('.surf__booking_quantity', '.surf__booking_persons', '.surf__persons_btns', '.surf__quantity_btns', '.type', '#surf_total', 65);
+    getTotalPrice('.surf__booking_quantity', '.surf__booking_persons', '.surf__persons_btns', '.surf__quantity_btns', '.type', '#surf_total', 65, true);
 
     getTotalPrice('.kite__booking_quantity', '.kite__booking_persons', '.kite__persons_btns', '.kite__quantity_btns', '.type', '#kite_total', 50);
 
     getTotalPrice('.sup__booking_quantity', '.sup__booking_persons', '.sup__persons_btns', '.sup__quantity_btns', '.type', '#sup_total', 45);
 
-    function getTotalPrice(quantitySel, personsSel, personsBtnsSel, quantityBtnsSel, valueSel, totalSel, rate) {
+    function getTotalPrice(quantitySel, personsSel, personsBtnsSel, quantityBtnsSel, valueSel, totalSel, rate, discount = false) {
         const quantity = document.querySelector(quantitySel),
             persons = document.querySelector(personsSel),
             personsBtns = persons.querySelector(personsBtnsSel),
@@ -30,7 +30,11 @@ const calc = () => {
                         }
                     }
                 });
-                totalValue.innerHTML = `$ ${rate * parseInt(valueSel.innerHTML) * parseInt(sublingSel.innerHTML)} USD`;
+                if(discount && (parseInt(valueSel.innerHTML) > 2 || parseInt(sublingSel.innerHTML) > 2)) {
+                    totalValue.innerHTML = `$ ${Math.floor(rate * parseInt(valueSel.innerHTML) * parseInt(sublingSel.innerHTML) * .9)} USD`;
+                } else {
+                    totalValue.innerHTML = `$ ${rate * parseInt(valueSel.innerHTML) * parseInt(sublingSel.innerHTML)} USD`;
+                }
             });
         }
         changeValue(personsBtns, personsValue, quantityValue, personsDescr);
