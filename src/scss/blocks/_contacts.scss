@@ -1,0 +1,108 @@
+.contact {
+    &__wrapper {
+        position: relative;
+        width: 100%;
+        min-height: 100vh;
+        background: url('../img/contact_bg.jpg') center center / cover no-repeat;
+        overflow: hidden;
+    }
+    &__inner {
+        height: 100vh;
+        margin-left: 8rem;
+        padding: 3rem;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        justify-content: space-between;
+
+    }
+    &__content {
+        text-align: right;
+        &-subtitle {
+            margin-top: 2rem;
+            margin-bottom: .5rem;
+        }
+        &-details {
+            display: block;
+            font-size: 2rem;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: .15rem;
+
+            & > br {
+                display: none;
+            }
+        }
+        &-icons {
+            margin-top: .5rem;
+            & img {
+                width: 3.2rem;
+                height: auto;
+            }
+            & > a:not(:last-child) {
+                margin-right: .6rem;
+            }
+        }
+        &-map {
+            margin-top: .3rem;
+            font-size: 1.1rem;
+            display: inline-block;
+            border-bottom: 1px dotted white;
+            cursor: pointer;
+        }
+
+    }
+    
+}
+@media (max-width: 999px) {
+    .contact {
+        
+        &__inner {
+            margin-left: 6rem;
+            padding: 2rem 1.2rem;
+    
+        }
+    }
+}
+@media (max-width: 786px) {
+    .contact {
+        &__title {
+            align-self: center;
+            text-align: center;
+        }
+        
+        &__content {
+            &-icons {
+                & img {
+                    width: 4rem;
+                    height: auto;
+                }
+                
+            }
+            &-details {
+                font-size: 1.7rem;
+                font-weight: 800;
+    
+                & > br {
+                    display: block;
+                }
+            }
+                
+        }
+    }
+}
+@media (max-width: 486px) {
+    .contact {
+        
+        &__inner {
+            padding: 2rem .8rem;
+    
+        }
+        &__content {
+            &-details {
+                font-size: 1.6rem;
+            }
+        }
+    }
+    
+}

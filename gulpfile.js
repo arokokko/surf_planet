@@ -11,7 +11,7 @@ const browsersync = require("browser-sync");
 const dist = "./dist";
 
 gulp.task("copy-html", () => {
-    return gulp.src("./src/index.html")
+    return gulp.src("./src/*.html")
                 .pipe(gulp.dest(dist))
                 .pipe(browsersync.stream());
 });
@@ -84,7 +84,7 @@ gulp.task("watch", () => {
 		notify: true
     });
 
-    gulp.watch("./src/index.html", gulp.parallel("copy-html"));
+    gulp.watch("./src/*.html", gulp.parallel("copy-html"));
     gulp.watch("./src/icons/**/*.*", gulp.parallel("copy-assets"));
     gulp.watch("./src/img/**/*.*", gulp.parallel("copy-assets"));
     gulp.watch("./src/fonts/**/*.*", gulp.parallel("copy-assets"));
@@ -100,7 +100,7 @@ gulp.task("build", gulp.parallel("copy-html", "css", "copy-assets", "build-sass"
 
 gulp.task("prod", gulp.series("clean", () => {
     
-    gulp.src("./src/index.html")
+    gulp.src("./src/*.html")
         .pipe(gulp.dest(dist));
     gulp.src("./src/img/**/*.*")
         .pipe(gulp.dest(dist + "/img"));
