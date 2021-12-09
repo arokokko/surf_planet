@@ -10,6 +10,10 @@ window.addEventListener('DOMContentLoaded', () => {
     date();
     burgerMenu();
     scroll();
+
+    try {
+        carousel('.about__carousel__wrapper');
+    } catch(e) {}
     
     try {
         carousel('.main__slider', false, false, '.main__slider_dots', '.main__slider_dot');
@@ -18,12 +22,18 @@ window.addEventListener('DOMContentLoaded', () => {
         carousel('.sup__carousel__wrapper');
         carousel('.shop__carousel__wrapper', true, true);
         
-        calc();
+        
         
         tabs('.board__tabs-long');
         tabs('.board__tabs-malibu');
         tabs('.board__tabs-short');
 
+        
+    } catch(e) {}
+    try {
+        calc();
+    } catch(e) {}
+    try {
         form();
     } catch(e) {}
     
